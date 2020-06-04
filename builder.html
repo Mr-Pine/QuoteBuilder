@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteBuilder</title>
+    <link rel="icon" href="Logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="material.css" rel="stylesheet" />
+    <script src="material.js" async></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="logo_div">
+        <img class="logo" src="Logo.png" />
+        <p class="logo_text">
+            QuoteBuilder
+        </p>
+    </div>
+    <div class="input-div">
+        <label class="mdc-text-field mdc-text-field--textarea text input input" style="height: auto;">
+            <span class="mdc-text-field__ripple"></span>
+            <textarea rows="5" cols="40" required class="mdc-text-field__input" aria-labelledby="text-label" name="text"
+                style="margin-top: 20px !important;"></textarea>
+            <span class="mdc-floating-label" id="text-label">text</span>
+            <span class="mdc-line-ripple"></span>
+        </label>
+        <br />
+        <label class="mdc-text-field mdc-text-field--outlined author input">
+            <span class="mdc-text-field__ripple"></span>
+            <input type="text" required class="mdc-text-field__input browser-default" aria-labelledby="author-label"
+                name="author">
+            <span class="mdc-floating-label" id="author-label">author</span>
+            <span class="mdc-line-ripple"></span>
+        </label>
+        <br />
+        <label class="mdc-text-field mdc-text-field--outlined author_tag input">
+            <span class="mdc-text-field__ripple"></span>
+            <input type="text" class="mdc-text-field__input browser-default" aria-labelledby="author_tag-label"
+                name="author_tag">
+            <span class="mdc-floating-label" id="author_tag-label">author_tag</span>
+            <span class="mdc-line-ripple"></span>
+        </label>
+        <br />
+
+        <label class="mdc-text-field mdc-text-field--outlined tags input ">
+            <span class="mdc-text-field__ripple"></span>
+            <div class="chips"
+                style="border-bottom:none !important; box-shadow: none !important; -webkit-box-shadow: none !important"
+                id="tag-div">
+                <input type="text" required class="mdc-text-field__input input browser-default" id="tag-input"
+                    aria-labelledby="tags-label" name="tags" style="display: inline; border-bottom: none; ;"
+                    onfocus="onTagFocus(this)" onkeyup="onEnter(this, event)" onchange="onChange(this)">
+            </div>
+            <span class="mdc-floating-label" id="tags-label">tags</span>
+            <span class="mdc-line-ripple"></span>
+        </label>
+
+    </div>
+
+
+</body>
+
+</html>

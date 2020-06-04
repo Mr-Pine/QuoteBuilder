@@ -1,0 +1,35 @@
+body {
+    background-color: #3C3C3C;
+    color           : #ECECEC;
+    font-family     : 'Cabin', 'sans-serif';
+}
+
+/*input {
+    background-color: #5a5a5a;
+}*/
+
+.logo {
+    height: 40pt;
+    margin: 0pt;
+}
+
+.logo_div {
+    margin : 10pt;
+    display: table;
+}
+
+.logo_text {
+    display       : table-cell;
+    vertical-align: middle;
+    margin        : 0;
+    font-size     : 25pt;
+}
+
+.input {
+    margin-top: 20pt;
+}
+
+.input-div {
+    margin-left: 20pt;
+}
+
