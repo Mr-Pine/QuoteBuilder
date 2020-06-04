@@ -37,27 +37,47 @@ body {
     background-color: #969696;
 }
 
+#buttons {
+    margin-top: 30pt;
+}
+
+button {
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+
+.mdc-button.clearRipple .mdc-button__ripple::before, .mdc-button.clearRipple .mdc-button__ripple::after {
+    background-color: #ce0026 !important;
+}
+
+.mdc-button.copyRipple .mdc-button__ripple::before, .mdc-button.copyRipple .mdc-button__ripple::after {
+    background-color: #00c907 !important;
+}
+
 .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
+    font-family   : 'Material Icons';
+    font-weight   : normal;
+    font-style    : normal;
+    font-size     : 24px;
+    /* Preferred icon size */
+    display       : inline-block;
+    line-height   : 1;
     text-transform: none;
     letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
+    word-wrap     : normal;
+    white-space   : nowrap;
+    direction     : ltr;
+
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
+    text-rendering        : optimizeLegibility;
+
     /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-  
+
     /* Support for IE. */
     font-feature-settings: 'liga';
-  }
+}
