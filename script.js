@@ -82,13 +82,9 @@ function clearAll() {
     copyLabel.hide()
     copyText.prop("disabled", false);
 
-    textInput = document.getElementById("text-input")
-    textInput.value = ""
-    textInput.parentElement.classList.remove("mdc-text-field--invalid")
 
-    author = document.getElementById("author-input")
-    author.value = ""
-    author.parentElement.classList.remove("mdc-text-field--invalid")
+    author = $("#author-input")
+    author[0].value = ""
 
     document.getElementById("author-tag-input").value = ""
 
@@ -97,4 +93,16 @@ function clearAll() {
         tagDiv.M_Chips.deleteChip(0)
     }
     document.getElementById("tag-input").value = ""
+    
+    textInput = $("#text-input")
+    textInput[0].value = ""
+    
+    author.focus()
+    $("#author-tag-input").focus()
+    $("#tag-input").focus()
+    textInput.focus()
+    
+    textInput[0].parentElement.classList.remove("mdc-text-field--invalid")
+
+    author[0].parentElement.classList.remove("mdc-text-field--invalid")
 }

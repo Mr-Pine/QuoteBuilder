@@ -11962,9 +11962,8 @@ var authorTag = new _textfield.MDCTextField(document.querySelector('.author-tag'
 var tags = new _textfield.MDCTextField(document.querySelector('.tags'));
 var copy = new _textfield.MDCTextField(document.querySelector(".copy-text"));
 
-console.log(new _ripple.MDCRipple(document.querySelector('.clear')));
+new _ripple.MDCRipple(document.querySelector('.clear'));
 new _ripple.MDCRipple(document.querySelector('.copy'));
-console.log("hey");
 
 console.log($('tag-input'));
 
