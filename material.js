@@ -11958,8 +11958,9 @@ var _ripple = __webpack_require__(60);
 
 var text = new _textfield.MDCTextField(document.querySelector('.text'));
 var author = new _textfield.MDCTextField(document.querySelector('.author'));
-var authorTag = new _textfield.MDCTextField(document.querySelector('.author_tag'));
+var authorTag = new _textfield.MDCTextField(document.querySelector('.author-tag'));
 var tags = new _textfield.MDCTextField(document.querySelector('.tags'));
+var copy = new _textfield.MDCTextField(document.querySelector(".copy-text"));
 
 console.log(new _ripple.MDCRipple(document.querySelector('.clear')));
 new _ripple.MDCRipple(document.querySelector('.copy'));

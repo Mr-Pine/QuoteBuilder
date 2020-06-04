@@ -4,18 +4,8 @@ function submit() {
 
 
 $(function () {
-    $('.chips-initial').material_chip({
-        readOnly: true,
-        data: myData
-    });
-    var x = 1;
-    $('.chips-placeholder').material_chip({
-        placeholder: 'Enter a tag',
-        secondaryPlaceholder: '+Tag',
-    });
-
-    $('.chips').material_chip();
-    $("#tag-input")[0].after("...")
+    var copyLabel = $("#copy-label")
+    copyLabel.hide()
 });
 
 function onTagFocus() {
@@ -36,20 +26,75 @@ function onChange(element) {
 }
 
 function onEnter(element, event) {
-    if(event.keyCode == 13){
+    if (event.keyCode == 13) {
         element.value = element.value + " "
     }
 }
 
 function onBack(element, event) {
     var childs = $("#tag-div")[0].children
-    if(event.keyCode == 8 && element.value == "" && childs.length > 1){
+    if (event.keyCode == 8 && element.value == "" && childs.length > 1) {
         element.value = " "
         var lastTag = childs[childs.length - 2]
-        lastTag.focus()        
+        lastTag.focus()
     }
 }
 
+function copy() {
+    var text = document.getElementById("text-input").value
+    var author = document.getElementById("author-input").value
+    var authorTag = document.getElementById("author-tag-input")
+    var tags = []
+    $("#tag-div")[0].M_Chips.chipsData.forEach((tagChip) => {
+        tags.push(tagChip.tag)
+    })
+    tags = tags.join(", ")
 
+    console.log("got Data")
 
-// get tags: console.log($("#tag-div")[0].M_Chips.chipsData)
+    var quoteString = `Text: ${text}\n\n\n` +
+        `Urheber: ${author}\n\n\n` +
+        `Urheber tag: @${author}\n\n\n` +
+        `Tags: ${tags}`
+
+    var copyText = $("#copy-text")
+    copyText[0].value = quoteString
+    var copyLabel = $("#copy-label")
+    copyLabel.show()
+    copyText.focus()
+
+    copyText.select()
+    try {
+        copyText.setSelectionRange(0, 99999)
+    } catch (error) {
+        
+    }
+
+    document.execCommand("copy")
+    
+    copyText.prop("disabled", true);
+}
+
+function clearAll() {
+    var copyText = $("#copy-text")
+    copyText[0].value = ""
+    var copyLabel = $("#copy-label")
+    copyLabel.hide()
+    copyText.prop("disabled", false);
+
+    textInput = document.getElementById("text-input")
+    textInput.value = ""
+    textInput.parentElement.classList.remove("mdc-text-field--invalid")
+
+    author = document.getElementById("author-input")
+    author.value = ""
+    author.parentElement.classList.remove("mdc-text-field--invalid")
+
+    document.getElementById("author-tag-input").value = ""
+
+    tagDiv = document.getElementById("tag-div")
+    while(tagDiv.M_Chips.chipsData.length > 0){
+        tagDiv.M_Chips.deleteChip(0)
+    }
+    document.getElementById("tag-input").value = ""
+}
