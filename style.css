@@ -33,6 +33,10 @@ body {
     margin-left: 20pt;
 }
 
+.chip {
+    background-color: #969696;
+}
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
