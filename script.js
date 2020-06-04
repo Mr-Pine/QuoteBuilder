@@ -4,8 +4,8 @@ function submit() {
 
 
 $(function () {
-    var copyLabel = $("#copy-label")
-    copyLabel.hide()
+    $("#copy-label").hide()
+    $("#error-warn").hide()
 });
 
 function onTagFocus() {
@@ -41,9 +41,23 @@ function onBack(element, event) {
 }
 
 function copy() {
+    textClassList = $("#text-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
+    authorClassList = $("#author-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
+
+
+    if(textClassList || authorClassList){
+        $("#error-warn").show()
+        return
+    }
+
+    $("#error-warn").hide()
+
     var text = document.getElementById("text-input").value
     var author = document.getElementById("author-input").value
-    var authorTag = document.getElementById("author-tag-input")
+    var authorTag = document.getElementById("author-tag-input").value
+    if(authorTag != ""){
+        authorTag = "@" + authorTag
+    }
     var tags = []
     $("#tag-div")[0].M_Chips.chipsData.forEach((tagChip) => {
         tags.push(tagChip.tag)
@@ -54,7 +68,7 @@ function copy() {
 
     var quoteString = `Text: ${text}\n\n\n` +
         `Urheber: ${author}\n\n\n` +
-        `Urheber tag: @${author}\n\n\n` +
+        `Urheber tag: ${authorTag}\n\n\n` +
         `Tags: ${tags}`
 
     var copyText = $("#copy-text")
@@ -82,6 +96,7 @@ function clearAll() {
     copyLabel.hide()
     copyText.prop("disabled", false);
 
+    $("#error-warn").hide()
 
     author = $("#author-input")
     author[0].value = ""
