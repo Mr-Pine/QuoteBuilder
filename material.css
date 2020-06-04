@@ -467,9 +467,9 @@
   will-change: opacity, transform, color;
 }
 
-.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+/*.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
   color: rgba(0, 0, 0, 0.6);
-}
+}*/
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
   color: rgba(0, 0, 0, 0.87);

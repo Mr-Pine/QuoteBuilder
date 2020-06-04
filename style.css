@@ -1,6 +1,13 @@
+:root {
+    --font-color     : #ECECEC;
+    --light-grey     : #939393;
+    --dark-grey      : #2b2b2b;
+    --highlight-color: #10ced4;
+}
+
 body {
     background-color: #3C3C3C;
-    color           : #ECECEC;
+    color           : var(--font-color);
     font-family     : 'Cabin', 'sans-serif';
 }
 
@@ -25,12 +32,18 @@ body {
     margin-top: 20pt;
 }
 
+.input_field {
+    color      : var(--font-color) !important;
+    caret-color: var(--font-color) !important;
+}
+
 .input-div {
     margin-left: 20pt;
 }
 
 .chip {
-    background-color: #969696;
+    background-color: var(--light-grey);
+    color           : var(--dark-grey);
 }
 
 #buttons {
@@ -38,19 +51,58 @@ body {
 }
 
 button {
-    height: 30px;
+    height      : 30px;
     margin-right: 10px;
 }
 
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--light-grey);
+}
 
-
-.mdc-button.clearRipple .mdc-button__ripple::before, .mdc-button.clearRipple .mdc-button__ripple::after {
+.mdc-button.clearRipple .mdc-button__ripple::before,
+.mdc-button.clearRipple .mdc-button__ripple::after {
     background-color: #ce0026 !important;
 }
 
-.mdc-button.copyRipple .mdc-button__ripple::before, .mdc-button.copyRipple .mdc-button__ripple::after {
+.mdc-button.copyRipple .mdc-button__ripple::before,
+.mdc-button.copyRipple .mdc-button__ripple::after {
     background-color: #00c907 !important;
 }
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__trailing,
+.mdc-text-field--textarea:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__trailing,
+.mdc-text-field--textarea:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--textarea:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__notch {
+    border-color: var(--highlight-color) !important;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) .mdc-floating-label {
+    color: var(--highlight-color) !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused) .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused) .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused) .mdc-notched-outline__trailing {
+    border-color: var(--dark-grey);
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: hsl(182, 86%, 20%) !important;
+}
+
+
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: #d33c00 !important;
+} 
+
+
 
 .material-icons {
     font-family   : 'Material Icons';
