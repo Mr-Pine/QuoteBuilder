@@ -33,22 +33,26 @@
     <div class="input-div">
         <div id="text">
             <label class="mdc-text-field mdc-text-field--textarea text input input" style="height: auto;">
-                <textarea rows="5" cols="40" required class="mdc-text-field__input input_field" aria-labelledby="text-label" autofocus
-                    name="text" style="margin-top: 15px !important; min-width: 400px !important;" id="text-input"></textarea>
+                <textarea rows="5" cols="40" required class="mdc-text-field__input input_field"
+                    aria-labelledby="text-label" autofocus name="text"
+                    style="margin-top: 15px !important; min-width: 400px !important;" id="text-input"></textarea>
                 <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
-                        <span class="mdc-floating-label" id="text-label">text</span>
+                        <span class="mdc-floating-label" id="text-label">Quote text</span>
                     </span>
                     <span class="mdc-notched-outline__trailing"></span>
                 </span>
             </label>
+            <div class="mdc-text-field-helper-line">
+                <div class="mdc-text-field-helper-text" aria-hidden="true">The text of the Quote (required)</div>
+            </div>
             <br />
 
 
             <label class="mdc-text-field mdc-text-field--outlined author input" style=" min-width: 400px;">
-                <input type="text" required class="mdc-text-field__input browser-default input_field" aria-labelledby="author-label"
-                    name="author" id="author-input">
+                <input type="text" required class="mdc-text-field__input browser-default input_field"
+                    aria-labelledby="author-label" name="author" id="author-input">
                 <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
@@ -61,8 +65,8 @@
 
 
             <label class="mdc-text-field mdc-text-field--outlined author-tag input" style=" min-width: 400px;">
-                <input type="text" class="mdc-text-field__input browser-default input_field" aria-labelledby="author_tag-label"
-                    name="author-tag" id="author-tag-input">
+                <input type="text" class="mdc-text-field__input browser-default input_field"
+                    aria-labelledby="author_tag-label" name="author-tag" id="author-tag-input">
                 <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
@@ -99,25 +103,29 @@
 
 
         <div id="buttons">
-            <button class="mdc-button mdc-button--raised copy copyRipple" id="copy-button" onclick="copy()" style="background-color: #6b6b6b; color: #00ab07;">
-              <div class="mdc-button__ripple copyRipple"></div>
-              <i class="material-icons mdc-button__icon" aria-hidden="true">assignment</i>
-              <span class="mdc-button__label">
-                Copy
-              </span>
+            <button class="mdc-button mdc-button--raised copy copyRipple" id="copy-button" onclick="copy()"
+                style="background-color: #6b6b6b; color: #00ab07;">
+                <div class="mdc-button__ripple copyRipple"></div>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">assignment</i>
+                <span class="mdc-button__label">
+                    Copy
+                </span>
             </button>
-            <button type="button" class="mdc-button mdc-button--outlined clear clearRipple" id="clear-button" onclick="clearAll()" style="border-color: #ad001f; color: #ad001f;">
+            <button type="button" class="mdc-button mdc-button--outlined clear clearRipple" id="clear-button"
+                onclick="clearAll()" style="border-color: #ad001f; color: #ad001f;">
                 <div class="mdc-button__ripple clearRipple"></div>
                 <i class="material-icons mdc-button__icon" aria-hidden="true">delete_forever</i>
                 <span class="mdc-button__label">
-                  Clear
+                    Clear
                 </span>
-              </button>
+            </button>
         </div>
 
-        <label class="mdc-text-field mdc-text-field--textarea copy-text input" id="copy-label" style="height: auto; margin-top: 30pt;">
-            <textarea class="mdc-text-field__input" aria-labelledby="copy-label"
-                name="copy" style="color: #8f8f8f;margin-top: 15px !important; min-width: 400px !important; height: 400px !important; cursor: text;" id="copy-text"></textarea>
+        <label class="mdc-text-field mdc-text-field--textarea copy-text input" id="copy-label"
+            style="height: auto; margin-top: 30pt;">
+            <textarea class="mdc-text-field__input" aria-labelledby="copy-label" name="copy"
+                style="color: #8f8f8f;margin-top: 15px !important; min-width: 400px !important; height: 400px !important; cursor: text;"
+                id="copy-text"></textarea>
             <span class="mdc-notched-outline">
                 <span class="mdc-notched-outline__leading"></span>
                 <span class="mdc-notched-outline__notch">
