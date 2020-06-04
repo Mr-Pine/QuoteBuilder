@@ -57,6 +57,8 @@ function copy() {
     var authorTag = document.getElementById("author-tag-input").value
     if(authorTag != ""){
         authorTag = "@" + authorTag
+    }else{
+        authorTag = "none"
     }
     var tags = []
     $("#tag-div")[0].M_Chips.chipsData.forEach((tagChip) => {
