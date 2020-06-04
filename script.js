@@ -37,7 +37,7 @@ function onChange(element) {
 
 function onEnter(element, event) {
     if(event.keyCode == 13){
-        //element.value = element.value + " "
+        element.value = element.value + " "
     }
 }
 
