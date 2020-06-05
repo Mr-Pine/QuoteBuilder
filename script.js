@@ -45,7 +45,7 @@ function copy() {
 
 
     if(textClassList || authorClassList){
-        openSnackbar("Please fill out all required fields correctly", false)
+        openSnackbar("Please fill out all required (*) fields correctly", false)
         return
     }
 
