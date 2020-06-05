@@ -11,6 +11,20 @@ body {
     font-family     : 'Cabin', 'sans-serif';
 }
 
+.hover-image {
+    --height: calc(679px / 4.5);
+    --width: calc(886px / 4.5);
+    background: none;
+    background-repeat: no-repeat;
+    height: var(--height);
+    width: var(--width);
+    background-size: var(--width) var(--height);
+}
+
+.hover-image:hover {
+    background-image: url("schweininchen.png") !important;
+}
+
 .logo {
     height: 40pt;
     margin: 0pt;
