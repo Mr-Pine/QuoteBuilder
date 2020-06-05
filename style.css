@@ -99,7 +99,7 @@ button {
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
-    border-color: #d33c00 ;
+    border-color: #d13b00 ;
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
@@ -107,10 +107,28 @@ button {
 }
 
 .mdc-text-field--invalid:not(.mdc-text-field--disabled)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
-    color: #a80000 !important;
+    color: rgb(168, 0, 0) !important;
 }
 
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: unset !important;
+  }
 
+.snackbar--positive:not(.snackbar--negative) .mdc-snackbar__label{
+    color: #00ab07;
+}
+
+.snackbar--positive:not(.snackbar--negative) .mdc-snackbar__surface{
+    border: 1px solid #00ab07;
+}
+
+.snackbar--negative:not(.snackbar--positive) .mdc-snackbar__label{
+    color: #ad001f;
+}
+
+.snackbar--negative:not(.snackbar--positive) .mdc-snackbar__surface{
+    border: 1px solid #ad001f;
+}
 
 .material-icons {
     font-family   : 'Material Icons';

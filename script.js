@@ -5,7 +5,6 @@ function submit() {
 
 $(function () {
     $("#copy-label").hide()
-    $("#error-warn").hide()
 });
 
 function onTagFocus() {
@@ -46,11 +45,9 @@ function copy() {
 
 
     if(textClassList || authorClassList){
-        $("#error-warn").show()
+        openSnackbar("Please fill out all required fields correctly", false)
         return
     }
-
-    $("#error-warn").hide()
 
     var text = document.getElementById("text-input").value
     var author = document.getElementById("author-input").value
@@ -89,6 +86,8 @@ function copy() {
     document.execCommand("copy")
     
     copyText.prop("disabled", true);
+
+    openSnackbar("Copied", true)
 }
 
 function clearAll() {
@@ -97,8 +96,6 @@ function clearAll() {
     var copyLabel = $("#copy-label")
     copyLabel.hide()
     copyText.prop("disabled", false);
-
-    $("#error-warn").hide()
 
     author = $("#author-input")
     author[0].value = ""
@@ -122,4 +119,18 @@ function clearAll() {
     textInput[0].parentElement.classList.remove("mdc-text-field--invalid")
 
     author[0].parentElement.classList.remove("mdc-text-field--invalid")
+
+    openSnackbar("Cleared!", true)
+}
+
+function openSnackbar(text, positive){
+    $("#snackbar")[0].classList.remove("snackbar--positive")
+    $("#snackbar")[0].classList.remove("snackbar--negative")
+    if(positive){
+        $("#snackbar")[0].classList.add("snackbar--positive")
+    }else{
+        $("#snackbar")[0].classList.add("snackbar--negative")
+    }
+    publicSnackbar.labelText = text
+    publicSnackbar.open()
 }

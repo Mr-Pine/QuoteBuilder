@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against local file",
-            "url": "file:///C:/Users/kiefe/OneDrive/Dokumente/DevStuff/QuoteBot/QuoteBuilder/builder.html",
+            "url": "file:///C:/Users/kiefe/OneDrive/Dokumente/DevStuff/QuoteBot/QuoteBuilder/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

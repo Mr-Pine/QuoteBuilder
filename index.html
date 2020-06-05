@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -129,7 +129,6 @@
                 </span>
             </button>
         </div>
-        <p style="color: #ad001f;" id="error-warn">Please fill out all fields correctly</p>
 
         <label class="mdc-text-field mdc-text-field--textarea copy-text input" id="copy-label"
             style="height: auto; margin-top: 30pt;">
@@ -145,6 +144,16 @@
             </span>
         </label>
     </div>
+
+    <div class="mdc-snackbar mdc-snackbar--leading" id="snackbar">
+        <div class="mdc-snackbar__surface">
+          <div class="mdc-snackbar__label"
+               role="status"
+               aria-live="polite">
+            Here should be something!
+          </div>
+        </div>
+      </div>
 
 
 </body>
