@@ -33,6 +33,7 @@ body {
 .logo_div {
     margin : 10pt;
     display: table;
+    position: fixed;
 }
 
 .logo_text {
@@ -52,7 +53,17 @@ body {
 }
 
 .input-div {
-    margin-left: 20pt;
+    margin-top: 100px;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mdc-text-field-helper-line {
+    padding-right: 0px !important;
+    margin-right: 0px;
+    max-width: 384px;
 }
 
 .chip {
@@ -62,6 +73,8 @@ body {
 
 #buttons {
     margin-top: 30pt;
+    display: flex;
+    justify-content: space-around;
 }
 
 button {
