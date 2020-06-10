@@ -24,14 +24,6 @@
 </head>
 
 <body>
-    <div class="top">
-        <div class="logo_div">
-            <img class="logo" src="Logo.png" />
-            <p class="logo_text">
-                QuoteBuilder
-            </p>
-        </div>
-    </div>
     <div class="input-div">
         <div id="text">
             <label class="mdc-text-field mdc-text-field--textarea text input input" style="height: auto;">
@@ -159,6 +151,42 @@
 
 
     <div class="hover-image" style="position: fixed; bottom: 0; right: 0;"></div>
+
+    
+    <div class="top-div">
+        <div class="logo_div top">
+            <img class="logo" src="Logo.png" />
+            <p class="logo_text">
+                QuoteBuilder
+            </p>
+        </div>
+        <div class="mdc-tab-bar top" role="tablist" style="width: 400px; ">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">QuoteBuilder</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                  <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">CommandBuilder</span>
+                    </span>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
 </body>
 
 </html>

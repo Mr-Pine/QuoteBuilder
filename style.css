@@ -12,13 +12,13 @@ body {
 }
 
 .hover-image {
-    --height: calc(679px / 4.5);
-    --width: calc(886px / 4.5);
-    background: none;
+    --height         : calc(679px / 4.5);
+    --width          : calc(886px / 4.5);
+    background       : none;
     background-repeat: no-repeat;
-    height: var(--height);
-    width: var(--width);
-    background-size: var(--width) var(--height);
+    height           : var(--height);
+    width            : var(--width);
+    background-size  : var(--width) var(--height);
 }
 
 .hover-image:hover {
@@ -30,10 +30,22 @@ body {
     margin: 0pt;
 }
 
+.top-div {
+    position        : fixed;
+    display         : table;
+    background-color: #3c3c3c;
+    /* border-bottom: thin solid white; */
+}
+
+.top {
+    display       : table-cell;
+    vertical-align: middle;
+    width         : 100%;
+}
+
 .logo_div {
     margin : 10pt;
     display: table;
-    position: fixed;
 }
 
 .logo_text {
@@ -54,16 +66,16 @@ body {
 
 .input-div {
     margin-top: 100px;
-    width: fit-content;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width     : fit-content;
+    position  : absolute;
+    left      : 50%;
+    transform : translateX(-50%);
 }
 
 .mdc-text-field-helper-line {
     padding-right: 0px !important;
-    margin-right: 0px;
-    max-width: 384px;
+    margin-right : 0px;
+    max-width    : 384px;
 }
 
 .chip {
@@ -72,14 +84,18 @@ body {
 }
 
 #buttons {
-    margin-top: 30pt;
-    display: flex;
+    margin-top     : 30pt;
+    display        : flex;
     justify-content: space-around;
 }
 
 button {
     height      : 30px;
     margin-right: 10px;
+}
+
+.mdc-tab__text-label {
+    text-transform: none;
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
@@ -126,7 +142,7 @@ button {
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
-    border-color: #d13b00 ;
+    border-color: #d13b00;
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
@@ -139,21 +155,21 @@ button {
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: unset !important;
-  }
+}
 
-.snackbar--positive:not(.snackbar--negative) .mdc-snackbar__label{
+.snackbar--positive:not(.snackbar--negative) .mdc-snackbar__label {
     color: #00ab07;
 }
 
-.snackbar--positive:not(.snackbar--negative) .mdc-snackbar__surface{
+.snackbar--positive:not(.snackbar--negative) .mdc-snackbar__surface {
     border: 1px solid #00ab07;
 }
 
-.snackbar--negative:not(.snackbar--positive) .mdc-snackbar__label{
+.snackbar--negative:not(.snackbar--positive) .mdc-snackbar__label {
     color: #ad001f;
 }
 
-.snackbar--negative:not(.snackbar--positive) .mdc-snackbar__surface{
+.snackbar--negative:not(.snackbar--positive) .mdc-snackbar__surface {
     border: 1px solid #ad001f;
 }
 
