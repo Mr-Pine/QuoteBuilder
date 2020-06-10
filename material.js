@@ -62,7 +62,7 @@ var publicSnackbar;
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 26);
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -81,8 +81,8 @@ var publicSnackbar;
 /* unused harmony export __createBinding */
 /* unused harmony export __exportStar */
 /* unused harmony export __values */
-/* unused harmony export __read */
-/* harmony export (immutable) */ __webpack_exports__["c"] = __spread;
+/* harmony export (immutable) */ __webpack_exports__["c"] = __read;
+/* harmony export (immutable) */ __webpack_exports__["d"] = __spread;
 /* unused harmony export __spreadArrays */
 /* unused harmony export __await */
 /* unused harmony export __asyncGenerator */
@@ -435,7 +435,7 @@ var MDCComponent = /** @class */ (function () {
             args[_i - 2] = arguments[_i];
         }
         this.root_ = root;
-        this.initialize.apply(this, Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __spread */])(args));
+        this.initialize.apply(this, Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __spread */])(args));
         // Note that we initialize foundation here and not within the constructor's default param so that
         // this.root_ is defined and can be used within the foundation class.
         this.foundation_ = foundation === undefined ? this.getDefaultFoundation() : foundation;
@@ -592,77 +592,11 @@ function estimateScrollWidth(element) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cssClasses; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return strings; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return numbers; });
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-var cssClasses = {
-    CLOSING: 'mdc-snackbar--closing',
-    OPEN: 'mdc-snackbar--open',
-    OPENING: 'mdc-snackbar--opening',
-};
-var strings = {
-    ACTION_SELECTOR: '.mdc-snackbar__action',
-    ARIA_LIVE_LABEL_TEXT_ATTR: 'data-mdc-snackbar-label-text',
-    CLOSED_EVENT: 'MDCSnackbar:closed',
-    CLOSING_EVENT: 'MDCSnackbar:closing',
-    DISMISS_SELECTOR: '.mdc-snackbar__dismiss',
-    LABEL_SELECTOR: '.mdc-snackbar__label',
-    OPENED_EVENT: 'MDCSnackbar:opened',
-    OPENING_EVENT: 'MDCSnackbar:opening',
-    REASON_ACTION: 'action',
-    REASON_DISMISS: 'dismiss',
-    SURFACE_SELECTOR: '.mdc-snackbar__surface',
-};
-var numbers = {
-    DEFAULT_AUTO_DISMISS_TIMEOUT_MS: 5000,
-    INDETERMINATE: -1,
-    MAX_AUTO_DISMISS_TIMEOUT_MS: 10000,
-    MIN_AUTO_DISMISS_TIMEOUT_MS: 4000,
-    // These variables need to be kept in sync with the values in _variables.scss.
-    SNACKBAR_ANIMATION_CLOSE_TIME_MS: 75,
-    SNACKBAR_ANIMATION_OPEN_TIME_MS: 150,
-    /**
-     * Number of milliseconds to wait between temporarily clearing the label text
-     * in the DOM and subsequently restoring it. This is necessary to force IE 11
-     * to pick up the `aria-live` content change and announce it to the user.
-     */
-    ARIA_LIVE_DELAY_MS: 1000,
-};
-
-//# sourceMappingURL=constants.js.map
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCRippleFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util__ = __webpack_require__(8);
 /**
  * @license
  * Copyright 2016 Google Inc.
@@ -1133,7 +1067,261 @@ var MDCRippleFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return strings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return numbers; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    CLOSING: 'mdc-snackbar--closing',
+    OPEN: 'mdc-snackbar--open',
+    OPENING: 'mdc-snackbar--opening',
+};
+var strings = {
+    ACTION_SELECTOR: '.mdc-snackbar__action',
+    ARIA_LIVE_LABEL_TEXT_ATTR: 'data-mdc-snackbar-label-text',
+    CLOSED_EVENT: 'MDCSnackbar:closed',
+    CLOSING_EVENT: 'MDCSnackbar:closing',
+    DISMISS_SELECTOR: '.mdc-snackbar__dismiss',
+    LABEL_SELECTOR: '.mdc-snackbar__label',
+    OPENED_EVENT: 'MDCSnackbar:opened',
+    OPENING_EVENT: 'MDCSnackbar:opening',
+    REASON_ACTION: 'action',
+    REASON_DISMISS: 'dismiss',
+    SURFACE_SELECTOR: '.mdc-snackbar__surface',
+};
+var numbers = {
+    DEFAULT_AUTO_DISMISS_TIMEOUT_MS: 5000,
+    INDETERMINATE: -1,
+    MAX_AUTO_DISMISS_TIMEOUT_MS: 10000,
+    MIN_AUTO_DISMISS_TIMEOUT_MS: 4000,
+    // These variables need to be kept in sync with the values in _variables.scss.
+    SNACKBAR_ANIMATION_CLOSE_TIME_MS: 75,
+    SNACKBAR_ANIMATION_OPEN_TIME_MS: 150,
+    /**
+     * Number of milliseconds to wait between temporarily clearing the label text
+     * in the DOM and subsequently restoring it. This is necessary to force IE 11
+     * to pick up the `aria-live` content change and announce it to the user.
+     */
+    ARIA_LIVE_DELAY_MS: 1000,
+};
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
 /* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = applyPassive;
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+/**
+ * Determine whether the current browser supports passive event listeners, and
+ * if so, use them.
+ */
+function applyPassive(globalObj) {
+    if (globalObj === void 0) { globalObj = window; }
+    return supportsPassiveOption(globalObj) ?
+        { passive: true } :
+        false;
+}
+function supportsPassiveOption(globalObj) {
+    if (globalObj === void 0) { globalObj = window; }
+    // See
+    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+    var passiveSupported = false;
+    try {
+        var options = {
+            // This function will be called when the browser
+            // attempts to access the passive property.
+            get passive() {
+                passiveSupported = true;
+                return false;
+            }
+        };
+        var handler = function () { };
+        globalObj.document.addEventListener('test', handler, options);
+        globalObj.document.removeEventListener('test', handler, options);
+    }
+    catch (err) {
+        passiveSupported = false;
+    }
+    return passiveSupported;
+}
+//# sourceMappingURL=events.js.map
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCRipple; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_dom_events__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_dom_ponyfill__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__foundation__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(8);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+var MDCRipple = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCRipple, _super);
+    function MDCRipple() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.disabled = false;
+        return _this;
+    }
+    MDCRipple.attachTo = function (root, opts) {
+        if (opts === void 0) { opts = { isUnbounded: undefined }; }
+        var ripple = new MDCRipple(root);
+        // Only override unbounded behavior if option is explicitly specified
+        if (opts.isUnbounded !== undefined) {
+            ripple.unbounded = opts.isUnbounded;
+        }
+        return ripple;
+    };
+    MDCRipple.createAdapter = function (instance) {
+        return {
+            addClass: function (className) { return instance.root_.classList.add(className); },
+            browserSupportsCssVars: function () { return __WEBPACK_IMPORTED_MODULE_5__util__["supportsCssVariables"](window); },
+            computeBoundingRect: function () { return instance.root_.getBoundingClientRect(); },
+            containsEventTarget: function (target) { return instance.root_.contains(target); },
+            deregisterDocumentInteractionHandler: function (evtType, handler) {
+                return document.documentElement.removeEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+            },
+            deregisterInteractionHandler: function (evtType, handler) {
+                return instance.root_.removeEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+            },
+            deregisterResizeHandler: function (handler) { return window.removeEventListener('resize', handler); },
+            getWindowPageOffset: function () { return ({ x: window.pageXOffset, y: window.pageYOffset }); },
+            isSurfaceActive: function () { return Object(__WEBPACK_IMPORTED_MODULE_3__material_dom_ponyfill__["c" /* matches */])(instance.root_, ':active'); },
+            isSurfaceDisabled: function () { return Boolean(instance.disabled); },
+            isUnbounded: function () { return Boolean(instance.unbounded); },
+            registerDocumentInteractionHandler: function (evtType, handler) {
+                return document.documentElement.addEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+            },
+            registerInteractionHandler: function (evtType, handler) {
+                return instance.root_.addEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+            },
+            registerResizeHandler: function (handler) { return window.addEventListener('resize', handler); },
+            removeClass: function (className) { return instance.root_.classList.remove(className); },
+            updateCssVariable: function (varName, value) { return instance.root_.style.setProperty(varName, value); },
+        };
+    };
+    Object.defineProperty(MDCRipple.prototype, "unbounded", {
+        get: function () {
+            return Boolean(this.unbounded_);
+        },
+        set: function (unbounded) {
+            this.unbounded_ = Boolean(unbounded);
+            this.setUnbounded_();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCRipple.prototype.activate = function () {
+        this.foundation_.activate();
+    };
+    MDCRipple.prototype.deactivate = function () {
+        this.foundation_.deactivate();
+    };
+    MDCRipple.prototype.layout = function () {
+        this.foundation_.layout();
+    };
+    MDCRipple.prototype.getDefaultFoundation = function () {
+        return new __WEBPACK_IMPORTED_MODULE_4__foundation__["a" /* MDCRippleFoundation */](MDCRipple.createAdapter(this));
+    };
+    MDCRipple.prototype.initialSyncWithDOM = function () {
+        var root = this.root_;
+        this.unbounded = 'mdcRippleIsUnbounded' in root.dataset;
+    };
+    /**
+     * Closure Compiler throws an access control error when directly accessing a
+     * protected or private property inside a getter/setter, like unbounded above.
+     * By accessing the protected property inside a method, we solve that problem.
+     * That's why this function exists.
+     */
+    MDCRipple.prototype.setUnbounded_ = function () {
+        this.foundation_.setUnbounded(Boolean(this.unbounded_));
+    };
+    return MDCRipple;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_component__["a" /* MDCComponent */]));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1193,14 +1381,14 @@ function getNormalizedEventCoords(evt, pageOffset, clientRect) {
 //# sourceMappingURL=util.js.map
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextFieldCharacterCounterFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(19);
 /**
  * @license
  * Copyright 2019 Google Inc.
@@ -1269,7 +1457,7 @@ var MDCTextFieldCharacterCounterFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1345,14 +1533,14 @@ var ALWAYS_FLOAT_TYPES = [
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextFieldHelperTextFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(22);
 /**
  * @license
  * Copyright 2017 Google Inc.
@@ -1481,7 +1669,123 @@ var MDCTextFieldHelperTextFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 10 */
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabScrollerRTL; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var MDCTabScrollerRTL = /** @class */ (function () {
+    function MDCTabScrollerRTL(adapter) {
+        this.adapter_ = adapter;
+    }
+    return MDCTabScrollerRTL;
+}());
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabScrollerRTL);
+//# sourceMappingURL=rtl-scroller.js.map
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabIndicatorFoundation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(83);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCTabIndicatorFoundation = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabIndicatorFoundation, _super);
+    function MDCTabIndicatorFoundation(adapter) {
+        return _super.call(this, Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])(Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])({}, MDCTabIndicatorFoundation.defaultAdapter), adapter)) || this;
+    }
+    Object.defineProperty(MDCTabIndicatorFoundation, "cssClasses", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* cssClasses */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabIndicatorFoundation, "strings", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabIndicatorFoundation, "defaultAdapter", {
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                computeContentClientRect: function () { return ({ top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 }); },
+                setContentStyleProperty: function () { return undefined; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCTabIndicatorFoundation.prototype.computeContentClientRect = function () {
+        return this.adapter_.computeContentClientRect();
+    };
+    return MDCTabIndicatorFoundation;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_foundation__["a" /* MDCFoundation */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabIndicatorFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1508,77 +1812,14 @@ module.exports = g;
 
 
 /***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = applyPassive;
-/**
- * @license
- * Copyright 2019 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-/**
- * Determine whether the current browser supports passive event listeners, and
- * if so, use them.
- */
-function applyPassive(globalObj) {
-    if (globalObj === void 0) { globalObj = window; }
-    return supportsPassiveOption(globalObj) ?
-        { passive: true } :
-        false;
-}
-function supportsPassiveOption(globalObj) {
-    if (globalObj === void 0) { globalObj = window; }
-    // See
-    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-    var passiveSupported = false;
-    try {
-        var options = {
-            // This function will be called when the browser
-            // attempts to access the passive property.
-            get passive() {
-                passiveSupported = true;
-                return false;
-            }
-        };
-        var handler = function () { };
-        globalObj.document.addEventListener('test', handler, options);
-        globalObj.document.removeEventListener('test', handler, options);
-    }
-    catch (err) {
-        passiveSupported = false;
-    }
-    return passiveSupported;
-}
-//# sourceMappingURL=events.js.map
-
-/***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCFloatingLabelFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(60);
 /**
  * @license
  * Copyright 2016 Google Inc.
@@ -1687,7 +1928,7 @@ var MDCFloatingLabelFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1732,132 +1973,7 @@ var cssClasses = {
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCRipple; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_dom_events__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_dom_ponyfill__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__foundation__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(6);
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-
-
-
-
-
-
-var MDCRipple = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCRipple, _super);
-    function MDCRipple() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.disabled = false;
-        return _this;
-    }
-    MDCRipple.attachTo = function (root, opts) {
-        if (opts === void 0) { opts = { isUnbounded: undefined }; }
-        var ripple = new MDCRipple(root);
-        // Only override unbounded behavior if option is explicitly specified
-        if (opts.isUnbounded !== undefined) {
-            ripple.unbounded = opts.isUnbounded;
-        }
-        return ripple;
-    };
-    MDCRipple.createAdapter = function (instance) {
-        return {
-            addClass: function (className) { return instance.root_.classList.add(className); },
-            browserSupportsCssVars: function () { return __WEBPACK_IMPORTED_MODULE_5__util__["supportsCssVariables"](window); },
-            computeBoundingRect: function () { return instance.root_.getBoundingClientRect(); },
-            containsEventTarget: function (target) { return instance.root_.contains(target); },
-            deregisterDocumentInteractionHandler: function (evtType, handler) {
-                return document.documentElement.removeEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
-            },
-            deregisterInteractionHandler: function (evtType, handler) {
-                return instance.root_.removeEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
-            },
-            deregisterResizeHandler: function (handler) { return window.removeEventListener('resize', handler); },
-            getWindowPageOffset: function () { return ({ x: window.pageXOffset, y: window.pageYOffset }); },
-            isSurfaceActive: function () { return Object(__WEBPACK_IMPORTED_MODULE_3__material_dom_ponyfill__["c" /* matches */])(instance.root_, ':active'); },
-            isSurfaceDisabled: function () { return Boolean(instance.disabled); },
-            isUnbounded: function () { return Boolean(instance.unbounded); },
-            registerDocumentInteractionHandler: function (evtType, handler) {
-                return document.documentElement.addEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
-            },
-            registerInteractionHandler: function (evtType, handler) {
-                return instance.root_.addEventListener(evtType, handler, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
-            },
-            registerResizeHandler: function (handler) { return window.addEventListener('resize', handler); },
-            removeClass: function (className) { return instance.root_.classList.remove(className); },
-            updateCssVariable: function (varName, value) { return instance.root_.style.setProperty(varName, value); },
-        };
-    };
-    Object.defineProperty(MDCRipple.prototype, "unbounded", {
-        get: function () {
-            return Boolean(this.unbounded_);
-        },
-        set: function (unbounded) {
-            this.unbounded_ = Boolean(unbounded);
-            this.setUnbounded_();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    MDCRipple.prototype.activate = function () {
-        this.foundation_.activate();
-    };
-    MDCRipple.prototype.deactivate = function () {
-        this.foundation_.deactivate();
-    };
-    MDCRipple.prototype.layout = function () {
-        this.foundation_.layout();
-    };
-    MDCRipple.prototype.getDefaultFoundation = function () {
-        return new __WEBPACK_IMPORTED_MODULE_4__foundation__["a" /* MDCRippleFoundation */](MDCRipple.createAdapter(this));
-    };
-    MDCRipple.prototype.initialSyncWithDOM = function () {
-        var root = this.root_;
-        this.unbounded = 'mdcRippleIsUnbounded' in root.dataset;
-    };
-    /**
-     * Closure Compiler throws an access control error when directly accessing a
-     * protected or private property inside a getter/setter, like unbounded above.
-     * By accessing the protected property inside a method, we solve that problem.
-     * That's why this function exists.
-     */
-    MDCRipple.prototype.setUnbounded_ = function () {
-        this.foundation_.setUnbounded(Boolean(this.unbounded_));
-    };
-    return MDCRipple;
-}(__WEBPACK_IMPORTED_MODULE_1__material_base_component__["a" /* MDCComponent */]));
-
-//# sourceMappingURL=component.js.map
-
-/***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1914,14 +2030,14 @@ var numbers = {
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextFieldCharacterCounter; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(9);
 /**
  * @license
  * Copyright 2019 Google Inc.
@@ -1979,7 +2095,7 @@ var MDCTextFieldCharacterCounter = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2017,14 +2133,14 @@ var strings = {
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextFieldFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(10);
 /**
  * @license
  * Copyright 2016 Google Inc.
@@ -2501,14 +2617,14 @@ var MDCTextFieldFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextFieldHelperText; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(11);
 /**
  * @license
  * Copyright 2017 Google Inc.
@@ -2573,7 +2689,7 @@ var MDCTextFieldHelperText = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2615,14 +2731,14 @@ var strings = {
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextFieldIcon; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(24);
 /**
  * @license
  * Copyright 2017 Google Inc.
@@ -2688,14 +2804,14 @@ var MDCTextFieldIcon = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextFieldIconFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(25);
 /**
  * @license
  * Copyright 2017 Google Inc.
@@ -2812,7 +2928,7 @@ var MDCTextFieldIconFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2851,13 +2967,13 @@ var cssClasses = {
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "announce", function() { return announce; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(5);
 /**
  * @license
  * Copyright 2018 Google Inc.
@@ -2941,14 +3057,14 @@ function announce(ariaEl, labelEl) {
 //# sourceMappingURL=util.js.map
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCSnackbarFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(5);
 /**
  * @license
  * Copyright 2018 Google Inc.
@@ -3148,15 +3264,625 @@ var MDCSnackbarFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 26 */
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return strings; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    ANIMATING: 'mdc-tab-scroller--animating',
+    SCROLL_AREA_SCROLL: 'mdc-tab-scroller__scroll-area--scroll',
+    SCROLL_TEST: 'mdc-tab-scroller__test',
+};
+var strings = {
+    AREA_SELECTOR: '.mdc-tab-scroller__scroll-area',
+    CONTENT_SELECTOR: '.mdc-tab-scroller__scroll-content',
+};
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabFoundation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(85);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCTabFoundation = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabFoundation, _super);
+    function MDCTabFoundation(adapter) {
+        var _this = _super.call(this, Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])(Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])({}, MDCTabFoundation.defaultAdapter), adapter)) || this;
+        _this.focusOnActivate_ = true;
+        return _this;
+    }
+    Object.defineProperty(MDCTabFoundation, "cssClasses", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* cssClasses */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabFoundation, "strings", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabFoundation, "defaultAdapter", {
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                hasClass: function () { return false; },
+                setAttr: function () { return undefined; },
+                activateIndicator: function () { return undefined; },
+                deactivateIndicator: function () { return undefined; },
+                notifyInteracted: function () { return undefined; },
+                getOffsetLeft: function () { return 0; },
+                getOffsetWidth: function () { return 0; },
+                getContentOffsetLeft: function () { return 0; },
+                getContentOffsetWidth: function () { return 0; },
+                focus: function () { return undefined; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCTabFoundation.prototype.handleClick = function () {
+        // It's up to the parent component to keep track of the active Tab and
+        // ensure we don't activate a Tab that's already active.
+        this.adapter_.notifyInteracted();
+    };
+    MDCTabFoundation.prototype.isActive = function () {
+        return this.adapter_.hasClass(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* cssClasses */].ACTIVE);
+    };
+    /**
+     * Sets whether the tab should focus itself when activated
+     */
+    MDCTabFoundation.prototype.setFocusOnActivate = function (focusOnActivate) {
+        this.focusOnActivate_ = focusOnActivate;
+    };
+    /**
+     * Activates the Tab
+     */
+    MDCTabFoundation.prototype.activate = function (previousIndicatorClientRect) {
+        this.adapter_.addClass(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* cssClasses */].ACTIVE);
+        this.adapter_.setAttr(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARIA_SELECTED, 'true');
+        this.adapter_.setAttr(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].TABINDEX, '0');
+        this.adapter_.activateIndicator(previousIndicatorClientRect);
+        if (this.focusOnActivate_) {
+            this.adapter_.focus();
+        }
+    };
+    /**
+     * Deactivates the Tab
+     */
+    MDCTabFoundation.prototype.deactivate = function () {
+        // Early exit
+        if (!this.isActive()) {
+            return;
+        }
+        this.adapter_.removeClass(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* cssClasses */].ACTIVE);
+        this.adapter_.setAttr(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARIA_SELECTED, 'false');
+        this.adapter_.setAttr(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].TABINDEX, '-1');
+        this.adapter_.deactivateIndicator();
+    };
+    /**
+     * Returns the dimensions of the Tab
+     */
+    MDCTabFoundation.prototype.computeDimensions = function () {
+        var rootWidth = this.adapter_.getOffsetWidth();
+        var rootLeft = this.adapter_.getOffsetLeft();
+        var contentWidth = this.adapter_.getContentOffsetWidth();
+        var contentLeft = this.adapter_.getContentOffsetLeft();
+        return {
+            contentLeft: rootLeft + contentLeft,
+            contentRight: rootLeft + contentLeft + contentWidth,
+            rootLeft: rootLeft,
+            rootRight: rootLeft + rootWidth,
+        };
+    };
+    return MDCTabFoundation;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_foundation__["a" /* MDCFoundation */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+/* 30 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabBarFoundation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(31);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var ACCEPTABLE_KEYS = new Set();
+// IE11 has no support for new Set with iterable so we need to initialize this by hand
+ACCEPTABLE_KEYS.add(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_LEFT_KEY);
+ACCEPTABLE_KEYS.add(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_RIGHT_KEY);
+ACCEPTABLE_KEYS.add(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].END_KEY);
+ACCEPTABLE_KEYS.add(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].HOME_KEY);
+ACCEPTABLE_KEYS.add(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ENTER_KEY);
+ACCEPTABLE_KEYS.add(__WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].SPACE_KEY);
+var KEYCODE_MAP = new Map();
+// IE11 has no support for new Map with iterable so we need to initialize this by hand
+KEYCODE_MAP.set(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].ARROW_LEFT_KEYCODE, __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_LEFT_KEY);
+KEYCODE_MAP.set(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].ARROW_RIGHT_KEYCODE, __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_RIGHT_KEY);
+KEYCODE_MAP.set(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].END_KEYCODE, __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].END_KEY);
+KEYCODE_MAP.set(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].HOME_KEYCODE, __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].HOME_KEY);
+KEYCODE_MAP.set(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].ENTER_KEYCODE, __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ENTER_KEY);
+KEYCODE_MAP.set(__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].SPACE_KEYCODE, __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].SPACE_KEY);
+var MDCTabBarFoundation = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabBarFoundation, _super);
+    function MDCTabBarFoundation(adapter) {
+        var _this = _super.call(this, Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])(Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])({}, MDCTabBarFoundation.defaultAdapter), adapter)) || this;
+        _this.useAutomaticActivation_ = false;
+        return _this;
+    }
+    Object.defineProperty(MDCTabBarFoundation, "strings", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabBarFoundation, "numbers", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabBarFoundation, "defaultAdapter", {
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                scrollTo: function () { return undefined; },
+                incrementScroll: function () { return undefined; },
+                getScrollPosition: function () { return 0; },
+                getScrollContentWidth: function () { return 0; },
+                getOffsetWidth: function () { return 0; },
+                isRTL: function () { return false; },
+                setActiveTab: function () { return undefined; },
+                activateTabAtIndex: function () { return undefined; },
+                deactivateTabAtIndex: function () { return undefined; },
+                focusTabAtIndex: function () { return undefined; },
+                getTabIndicatorClientRectAtIndex: function () { return ({ top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 }); },
+                getTabDimensionsAtIndex: function () { return ({ rootLeft: 0, rootRight: 0, contentLeft: 0, contentRight: 0 }); },
+                getPreviousActiveTabIndex: function () { return -1; },
+                getFocusedTabIndex: function () { return -1; },
+                getIndexOfTabById: function () { return -1; },
+                getTabListLength: function () { return 0; },
+                notifyTabActivated: function () { return undefined; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Switches between automatic and manual activation modes.
+     * See https://www.w3.org/TR/wai-aria-practices/#tabpanel for examples.
+     */
+    MDCTabBarFoundation.prototype.setUseAutomaticActivation = function (useAutomaticActivation) {
+        this.useAutomaticActivation_ = useAutomaticActivation;
+    };
+    MDCTabBarFoundation.prototype.activateTab = function (index) {
+        var previousActiveIndex = this.adapter_.getPreviousActiveTabIndex();
+        if (!this.indexIsInRange_(index) || index === previousActiveIndex) {
+            return;
+        }
+        var previousClientRect;
+        if (previousActiveIndex !== -1) {
+            this.adapter_.deactivateTabAtIndex(previousActiveIndex);
+            previousClientRect = this.adapter_.getTabIndicatorClientRectAtIndex(previousActiveIndex);
+        }
+        this.adapter_.activateTabAtIndex(index, previousClientRect);
+        this.scrollIntoView(index);
+        this.adapter_.notifyTabActivated(index);
+    };
+    MDCTabBarFoundation.prototype.handleKeyDown = function (evt) {
+        // Get the key from the event
+        var key = this.getKeyFromEvent_(evt);
+        // Early exit if the event key isn't one of the keyboard navigation keys
+        if (key === undefined) {
+            return;
+        }
+        // Prevent default behavior for movement keys, but not for activation keys, since :active is used to apply ripple
+        if (!this.isActivationKey_(key)) {
+            evt.preventDefault();
+        }
+        if (this.useAutomaticActivation_) {
+            if (this.isActivationKey_(key)) {
+                return;
+            }
+            var index = this.determineTargetFromKey_(this.adapter_.getPreviousActiveTabIndex(), key);
+            this.adapter_.setActiveTab(index);
+            this.scrollIntoView(index);
+        }
+        else {
+            var focusedTabIndex = this.adapter_.getFocusedTabIndex();
+            if (this.isActivationKey_(key)) {
+                this.adapter_.setActiveTab(focusedTabIndex);
+            }
+            else {
+                var index = this.determineTargetFromKey_(focusedTabIndex, key);
+                this.adapter_.focusTabAtIndex(index);
+                this.scrollIntoView(index);
+            }
+        }
+    };
+    /**
+     * Handles the MDCTab:interacted event
+     */
+    MDCTabBarFoundation.prototype.handleTabInteraction = function (evt) {
+        this.adapter_.setActiveTab(this.adapter_.getIndexOfTabById(evt.detail.tabId));
+    };
+    /**
+     * Scrolls the tab at the given index into view
+     * @param index The tab index to make visible
+     */
+    MDCTabBarFoundation.prototype.scrollIntoView = function (index) {
+        // Early exit if the index is out of range
+        if (!this.indexIsInRange_(index)) {
+            return;
+        }
+        // Always scroll to 0 if scrolling to the 0th index
+        if (index === 0) {
+            return this.adapter_.scrollTo(0);
+        }
+        // Always scroll to the max value if scrolling to the Nth index
+        // MDCTabScroller.scrollTo() will never scroll past the max possible value
+        if (index === this.adapter_.getTabListLength() - 1) {
+            return this.adapter_.scrollTo(this.adapter_.getScrollContentWidth());
+        }
+        if (this.isRTL_()) {
+            return this.scrollIntoViewRTL_(index);
+        }
+        this.scrollIntoView_(index);
+    };
+    /**
+     * Private method for determining the index of the destination tab based on what key was pressed
+     * @param origin The original index from which to determine the destination
+     * @param key The name of the key
+     */
+    MDCTabBarFoundation.prototype.determineTargetFromKey_ = function (origin, key) {
+        var isRTL = this.isRTL_();
+        var maxIndex = this.adapter_.getTabListLength() - 1;
+        var shouldGoToEnd = key === __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].END_KEY;
+        var shouldDecrement = key === __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_LEFT_KEY && !isRTL || key === __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_RIGHT_KEY && isRTL;
+        var shouldIncrement = key === __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_RIGHT_KEY && !isRTL || key === __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ARROW_LEFT_KEY && isRTL;
+        var index = origin;
+        if (shouldGoToEnd) {
+            index = maxIndex;
+        }
+        else if (shouldDecrement) {
+            index -= 1;
+        }
+        else if (shouldIncrement) {
+            index += 1;
+        }
+        else {
+            index = 0;
+        }
+        if (index < 0) {
+            index = maxIndex;
+        }
+        else if (index > maxIndex) {
+            index = 0;
+        }
+        return index;
+    };
+    /**
+     * Calculates the scroll increment that will make the tab at the given index visible
+     * @param index The index of the tab
+     * @param nextIndex The index of the next tab
+     * @param scrollPosition The current scroll position
+     * @param barWidth The width of the Tab Bar
+     */
+    MDCTabBarFoundation.prototype.calculateScrollIncrement_ = function (index, nextIndex, scrollPosition, barWidth) {
+        var nextTabDimensions = this.adapter_.getTabDimensionsAtIndex(nextIndex);
+        var relativeContentLeft = nextTabDimensions.contentLeft - scrollPosition - barWidth;
+        var relativeContentRight = nextTabDimensions.contentRight - scrollPosition;
+        var leftIncrement = relativeContentRight - __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].EXTRA_SCROLL_AMOUNT;
+        var rightIncrement = relativeContentLeft + __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].EXTRA_SCROLL_AMOUNT;
+        if (nextIndex < index) {
+            return Math.min(leftIncrement, 0);
+        }
+        return Math.max(rightIncrement, 0);
+    };
+    /**
+     * Calculates the scroll increment that will make the tab at the given index visible in RTL
+     * @param index The index of the tab
+     * @param nextIndex The index of the next tab
+     * @param scrollPosition The current scroll position
+     * @param barWidth The width of the Tab Bar
+     * @param scrollContentWidth The width of the scroll content
+     */
+    MDCTabBarFoundation.prototype.calculateScrollIncrementRTL_ = function (index, nextIndex, scrollPosition, barWidth, scrollContentWidth) {
+        var nextTabDimensions = this.adapter_.getTabDimensionsAtIndex(nextIndex);
+        var relativeContentLeft = scrollContentWidth - nextTabDimensions.contentLeft - scrollPosition;
+        var relativeContentRight = scrollContentWidth - nextTabDimensions.contentRight - scrollPosition - barWidth;
+        var leftIncrement = relativeContentRight + __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].EXTRA_SCROLL_AMOUNT;
+        var rightIncrement = relativeContentLeft - __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* numbers */].EXTRA_SCROLL_AMOUNT;
+        if (nextIndex > index) {
+            return Math.max(leftIncrement, 0);
+        }
+        return Math.min(rightIncrement, 0);
+    };
+    /**
+     * Determines the index of the adjacent tab closest to either edge of the Tab Bar
+     * @param index The index of the tab
+     * @param tabDimensions The dimensions of the tab
+     * @param scrollPosition The current scroll position
+     * @param barWidth The width of the tab bar
+     */
+    MDCTabBarFoundation.prototype.findAdjacentTabIndexClosestToEdge_ = function (index, tabDimensions, scrollPosition, barWidth) {
+        /**
+         * Tabs are laid out in the Tab Scroller like this:
+         *
+         *    Scroll Position
+         *    +---+
+         *    |   |   Bar Width
+         *    |   +-----------------------------------+
+         *    |   |                                   |
+         *    |   V                                   V
+         *    |   +-----------------------------------+
+         *    V   |             Tab Scroller          |
+         *    +------------+--------------+-------------------+
+         *    |    Tab     |      Tab     |        Tab        |
+         *    +------------+--------------+-------------------+
+         *        |                                   |
+         *        +-----------------------------------+
+         *
+         * To determine the next adjacent index, we look at the Tab root left and
+         * Tab root right, both relative to the scroll position. If the Tab root
+         * left is less than 0, then we know it's out of view to the left. If the
+         * Tab root right minus the bar width is greater than 0, we know the Tab is
+         * out of view to the right. From there, we either increment or decrement
+         * the index.
+         */
+        var relativeRootLeft = tabDimensions.rootLeft - scrollPosition;
+        var relativeRootRight = tabDimensions.rootRight - scrollPosition - barWidth;
+        var relativeRootDelta = relativeRootLeft + relativeRootRight;
+        var leftEdgeIsCloser = relativeRootLeft < 0 || relativeRootDelta < 0;
+        var rightEdgeIsCloser = relativeRootRight > 0 || relativeRootDelta > 0;
+        if (leftEdgeIsCloser) {
+            return index - 1;
+        }
+        if (rightEdgeIsCloser) {
+            return index + 1;
+        }
+        return -1;
+    };
+    /**
+     * Determines the index of the adjacent tab closest to either edge of the Tab Bar in RTL
+     * @param index The index of the tab
+     * @param tabDimensions The dimensions of the tab
+     * @param scrollPosition The current scroll position
+     * @param barWidth The width of the tab bar
+     * @param scrollContentWidth The width of the scroller content
+     */
+    MDCTabBarFoundation.prototype.findAdjacentTabIndexClosestToEdgeRTL_ = function (index, tabDimensions, scrollPosition, barWidth, scrollContentWidth) {
+        var rootLeft = scrollContentWidth - tabDimensions.rootLeft - barWidth - scrollPosition;
+        var rootRight = scrollContentWidth - tabDimensions.rootRight - scrollPosition;
+        var rootDelta = rootLeft + rootRight;
+        var leftEdgeIsCloser = rootLeft > 0 || rootDelta > 0;
+        var rightEdgeIsCloser = rootRight < 0 || rootDelta < 0;
+        if (leftEdgeIsCloser) {
+            return index + 1;
+        }
+        if (rightEdgeIsCloser) {
+            return index - 1;
+        }
+        return -1;
+    };
+    /**
+     * Returns the key associated with a keydown event
+     * @param evt The keydown event
+     */
+    MDCTabBarFoundation.prototype.getKeyFromEvent_ = function (evt) {
+        if (ACCEPTABLE_KEYS.has(evt.key)) {
+            return evt.key;
+        }
+        return KEYCODE_MAP.get(evt.keyCode);
+    };
+    MDCTabBarFoundation.prototype.isActivationKey_ = function (key) {
+        return key === __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].SPACE_KEY || key === __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].ENTER_KEY;
+    };
+    /**
+     * Returns whether a given index is inclusively between the ends
+     * @param index The index to test
+     */
+    MDCTabBarFoundation.prototype.indexIsInRange_ = function (index) {
+        return index >= 0 && index < this.adapter_.getTabListLength();
+    };
+    /**
+     * Returns the view's RTL property
+     */
+    MDCTabBarFoundation.prototype.isRTL_ = function () {
+        return this.adapter_.isRTL();
+    };
+    /**
+     * Scrolls the tab at the given index into view for left-to-right user agents.
+     * @param index The index of the tab to scroll into view
+     */
+    MDCTabBarFoundation.prototype.scrollIntoView_ = function (index) {
+        var scrollPosition = this.adapter_.getScrollPosition();
+        var barWidth = this.adapter_.getOffsetWidth();
+        var tabDimensions = this.adapter_.getTabDimensionsAtIndex(index);
+        var nextIndex = this.findAdjacentTabIndexClosestToEdge_(index, tabDimensions, scrollPosition, barWidth);
+        if (!this.indexIsInRange_(nextIndex)) {
+            return;
+        }
+        var scrollIncrement = this.calculateScrollIncrement_(index, nextIndex, scrollPosition, barWidth);
+        this.adapter_.incrementScroll(scrollIncrement);
+    };
+    /**
+     * Scrolls the tab at the given index into view in RTL
+     * @param index The tab index to make visible
+     */
+    MDCTabBarFoundation.prototype.scrollIntoViewRTL_ = function (index) {
+        var scrollPosition = this.adapter_.getScrollPosition();
+        var barWidth = this.adapter_.getOffsetWidth();
+        var tabDimensions = this.adapter_.getTabDimensionsAtIndex(index);
+        var scrollWidth = this.adapter_.getScrollContentWidth();
+        var nextIndex = this.findAdjacentTabIndexClosestToEdgeRTL_(index, tabDimensions, scrollPosition, barWidth, scrollWidth);
+        if (!this.indexIsInRange_(nextIndex)) {
+            return;
+        }
+        var scrollIncrement = this.calculateScrollIncrementRTL_(index, nextIndex, scrollPosition, barWidth, scrollWidth);
+        this.adapter_.incrementScroll(scrollIncrement);
+    };
+    return MDCTabBarFoundation;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_foundation__["a" /* MDCFoundation */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabBarFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+/* 31 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return numbers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return strings; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var strings = {
+    ARROW_LEFT_KEY: 'ArrowLeft',
+    ARROW_RIGHT_KEY: 'ArrowRight',
+    END_KEY: 'End',
+    ENTER_KEY: 'Enter',
+    HOME_KEY: 'Home',
+    SPACE_KEY: 'Space',
+    TAB_ACTIVATED_EVENT: 'MDCTabBar:activated',
+    TAB_SCROLLER_SELECTOR: '.mdc-tab-scroller',
+    TAB_SELECTOR: '.mdc-tab',
+};
+var numbers = {
+    ARROW_LEFT_KEYCODE: 37,
+    ARROW_RIGHT_KEYCODE: 39,
+    END_KEYCODE: 35,
+    ENTER_KEYCODE: 13,
+    EXTRA_SCROLL_AMOUNT: 20,
+    HOME_KEYCODE: 36,
+    SPACE_KEYCODE: 32,
+};
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(27);
-module.exports = __webpack_require__(50);
+__webpack_require__(33);
+module.exports = __webpack_require__(56);
 
 
 /***/ }),
-/* 27 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3165,11 +3891,11 @@ module.exports = __webpack_require__(50);
 /* global __resourceQuery WorkerGlobalScope self */
 /* eslint prefer-destructuring: off */
 
-var url = __webpack_require__(28);
-var stripAnsi = __webpack_require__(35);
-var log = __webpack_require__(37).getLogger('webpack-dev-server');
-var socket = __webpack_require__(38);
-var overlay = __webpack_require__(40);
+var url = __webpack_require__(34);
+var stripAnsi = __webpack_require__(41);
+var log = __webpack_require__(43).getLogger('webpack-dev-server');
+var socket = __webpack_require__(44);
+var overlay = __webpack_require__(46);
 
 function getCurrentScriptSource() {
   // `document.currentScript` is the most accurate way to find the current script,
@@ -3254,7 +3980,7 @@ var onSocketMsg = {
     sendMsg('StillOk');
   },
   'log-level': function logLevel(level) {
-    var hotCtx = __webpack_require__(46);
+    var hotCtx = __webpack_require__(52);
     if (hotCtx.keys().indexOf('./log') !== -1) {
       hotCtx('./log').setLogLevel(level);
     }
@@ -3384,7 +4110,7 @@ function reloadApp() {
   if (_hot) {
     log.info('[WDS] App hot update...');
     // eslint-disable-next-line global-require
-    var hotEmitter = __webpack_require__(48);
+    var hotEmitter = __webpack_require__(54);
     hotEmitter.emit('webpackHotUpdate', currentHash);
     if (typeof self !== 'undefined' && self.window) {
       // broadcast update to window
@@ -3416,7 +4142,7 @@ function reloadApp() {
 /* WEBPACK VAR INJECTION */}.call(exports, "?http://localhost:8080"))
 
 /***/ }),
-/* 28 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3443,8 +4169,8 @@ function reloadApp() {
 
 
 
-var punycode = __webpack_require__(29);
-var util = __webpack_require__(31);
+var punycode = __webpack_require__(35);
+var util = __webpack_require__(37);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -3519,7 +4245,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(32);
+    querystring = __webpack_require__(38);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -4155,7 +4881,7 @@ Url.prototype.parseHost = function() {
 
 
 /***/ }),
-/* 29 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -4691,10 +5417,10 @@ Url.prototype.parseHost = function() {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)(module), __webpack_require__(10)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)(module), __webpack_require__(14)))
 
 /***/ }),
-/* 30 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -4722,7 +5448,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 31 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4745,18 +5471,18 @@ module.exports = {
 
 
 /***/ }),
-/* 32 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(33);
-exports.encode = exports.stringify = __webpack_require__(34);
+exports.decode = exports.parse = __webpack_require__(39);
+exports.encode = exports.stringify = __webpack_require__(40);
 
 
 /***/ }),
-/* 33 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4847,7 +5573,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 34 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4939,12 +5665,12 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 35 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ansiRegex = __webpack_require__(36)();
+var ansiRegex = __webpack_require__(42)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
@@ -4952,7 +5678,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 36 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4963,7 +5689,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 37 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -5241,13 +5967,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
 
 
 /***/ }),
-/* 38 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var SockJS = __webpack_require__(39);
+var SockJS = __webpack_require__(45);
 
 var retries = 0;
 var sock = null;
@@ -5293,7 +6019,7 @@ var socket = function initSocket(url, handlers) {
 module.exports = socket;
 
 /***/ }),
-/* 39 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var require;var require;/* sockjs-client v1.1.5 | http://sockjs.org | MIT license */
@@ -11049,10 +11775,10 @@ module.exports = URL;
 
 //# sourceMappingURL=sockjs.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ }),
-/* 40 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11061,8 +11787,8 @@ module.exports = URL;
 // The error overlay is inspired (and mostly copied) from Create React App (https://github.com/facebookincubator/create-react-app)
 // They, in turn, got inspired by webpack-hot-middleware (https://github.com/glenjamin/webpack-hot-middleware).
 
-var ansiHTML = __webpack_require__(41);
-var Entities = __webpack_require__(42).AllHtmlEntities;
+var ansiHTML = __webpack_require__(47);
+var Entities = __webpack_require__(48).AllHtmlEntities;
 
 var entities = new Entities();
 
@@ -11184,7 +11910,7 @@ exports.showMessage = function handleMessage(messages) {
 };
 
 /***/ }),
-/* 41 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11367,23 +12093,23 @@ ansiHTML.reset()
 
 
 /***/ }),
-/* 42 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var xml_entities_1 = __webpack_require__(43);
+var xml_entities_1 = __webpack_require__(49);
 exports.XmlEntities = xml_entities_1.XmlEntities;
-var html4_entities_1 = __webpack_require__(44);
+var html4_entities_1 = __webpack_require__(50);
 exports.Html4Entities = html4_entities_1.Html4Entities;
-var html5_entities_1 = __webpack_require__(45);
+var html5_entities_1 = __webpack_require__(51);
 exports.Html5Entities = html5_entities_1.Html5Entities;
 exports.AllHtmlEntities = html5_entities_1.Html5Entities;
 
 
 /***/ }),
-/* 43 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11504,7 +12230,7 @@ exports.XmlEntities = XmlEntities;
 
 
 /***/ }),
-/* 44 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11621,7 +12347,7 @@ exports.Html4Entities = Html4Entities;
 
 
 /***/ }),
-/* 45 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11775,11 +12501,11 @@ function createIndexes(alphaIndex, charIndex) {
 
 
 /***/ }),
-/* 46 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./log": 47
+	"./log": 53
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -11795,10 +12521,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 46;
+webpackContext.id = 52;
 
 /***/ }),
-/* 47 */
+/* 53 */
 /***/ (function(module, exports) {
 
 var logLevel = "info";
@@ -11848,15 +12574,15 @@ module.exports.setLogLevel = function(level) {
 
 
 /***/ }),
-/* 48 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var EventEmitter = __webpack_require__(49);
+var EventEmitter = __webpack_require__(55);
 module.exports = new EventEmitter();
 
 
 /***/ }),
-/* 49 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12311,17 +13037,19 @@ function unwrapListeners(arr) {
 
 
 /***/ }),
-/* 50 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _textfield = __webpack_require__(51);
+var _textfield = __webpack_require__(57);
 
-var _ripple = __webpack_require__(63);
+var _ripple = __webpack_require__(69);
 
-var _snackbar = __webpack_require__(64);
+var _snackbar = __webpack_require__(70);
+
+var _tabBar = __webpack_require__(72);
 
 /*setTimeout(() => {
     console.log("hi")
@@ -12330,6 +13058,8 @@ var _snackbar = __webpack_require__(64);
 
 var snackbar = new _snackbar.MDCSnackbar(document.querySelector('.mdc-snackbar'));
 publicSnackbar = snackbar
+
+var tabBar = new _tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
 var text = new _textfield.MDCTextField(document.querySelector('.text'));
 var author = new _textfield.MDCTextField(document.querySelector('.author'));
@@ -12367,32 +13097,32 @@ $('.chips-autocomplete').chips({
 });
 
 /***/ }),
-/* 51 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(58);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTextField", function() { return __WEBPACK_IMPORTED_MODULE_0__component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(10);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return __WEBPACK_IMPORTED_MODULE_1__constants__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return __WEBPACK_IMPORTED_MODULE_1__constants__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return __WEBPACK_IMPORTED_MODULE_1__constants__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "VALIDATION_ATTR_WHITELIST", function() { return __WEBPACK_IMPORTED_MODULE_1__constants__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ALWAYS_FLOAT_TYPES", function() { return __WEBPACK_IMPORTED_MODULE_1__constants__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(20);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTextFieldFoundation", function() { return __WEBPACK_IMPORTED_MODULE_2__foundation__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__character_counter_index__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__character_counter_index__ = __webpack_require__(66);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "characterCountCssClasses", function() { return __WEBPACK_IMPORTED_MODULE_3__character_counter_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "characterCountStrings", function() { return __WEBPACK_IMPORTED_MODULE_3__character_counter_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTextFieldCharacterCounter", function() { return __WEBPACK_IMPORTED_MODULE_3__character_counter_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTextFieldCharacterCounterFoundation", function() { return __WEBPACK_IMPORTED_MODULE_3__character_counter_index__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__helper_text_index__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__helper_text_index__ = __webpack_require__(67);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "helperTextCssClasses", function() { return __WEBPACK_IMPORTED_MODULE_4__helper_text_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "helperTextStrings", function() { return __WEBPACK_IMPORTED_MODULE_4__helper_text_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTextFieldHelperText", function() { return __WEBPACK_IMPORTED_MODULE_4__helper_text_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTextFieldHelperTextFoundation", function() { return __WEBPACK_IMPORTED_MODULE_4__helper_text_index__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__icon_index__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__icon_index__ = __webpack_require__(68);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "iconCssClasses", function() { return __WEBPACK_IMPORTED_MODULE_5__icon_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "iconStrings", function() { return __WEBPACK_IMPORTED_MODULE_5__icon_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTextFieldIcon", function() { return __WEBPACK_IMPORTED_MODULE_5__icon_index__["a"]; });
@@ -12428,27 +13158,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 52 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTextField; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_dom_events__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_dom_events__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_dom_ponyfill__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_floating_label_component__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_line_ripple_component__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_notched_outline_component__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ripple_component__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ripple_foundation__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__character_counter_component__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__character_counter_foundation__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__foundation__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__helper_text_component__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__helper_text_foundation__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__icon_component__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_floating_label_component__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_line_ripple_component__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_notched_outline_component__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ripple_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ripple_foundation__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__character_counter_component__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__character_counter_foundation__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__constants__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__foundation__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__helper_text_component__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__helper_text_foundation__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__icon_component__ = __webpack_require__(23);
 /**
  * @license
  * Copyright 2016 Google Inc.
@@ -12932,7 +13662,7 @@ var MDCTextField = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 
 /***/ }),
-/* 53 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12940,7 +13670,7 @@ var MDCTextField = /** @class */ (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_dom_ponyfill__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__foundation__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__foundation__ = __webpack_require__(15);
 /**
  * @license
  * Copyright 2016 Google Inc.
@@ -13017,7 +13747,7 @@ var MDCFloatingLabel = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 
 /***/ }),
-/* 54 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13052,14 +13782,14 @@ var cssClasses = {
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 55 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCLineRipple; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(62);
 /**
  * @license
  * Copyright 2018 Google Inc.
@@ -13134,14 +13864,14 @@ var MDCLineRipple = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 
 /***/ }),
-/* 56 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCLineRippleFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(63);
 /**
  * @license
  * Copyright 2018 Google Inc.
@@ -13235,7 +13965,7 @@ var MDCLineRippleFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 57 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13270,16 +14000,16 @@ var cssClasses = {
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
-/* 58 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCNotchedOutline; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_floating_label_foundation__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__foundation__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_floating_label_foundation__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__foundation__ = __webpack_require__(65);
 /**
  * @license
  * Copyright 2017 Google Inc.
@@ -13362,14 +14092,14 @@ var MDCNotchedOutline = /** @class */ (function (_super) {
 //# sourceMappingURL=component.js.map
 
 /***/ }),
-/* 59 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCNotchedOutlineFoundation; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(16);
 /**
  * @license
  * Copyright 2017 Google Inc.
@@ -13465,54 +14195,15 @@ var MDCNotchedOutlineFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
-/* 60 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(16);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation__ = __webpack_require__(7);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__foundation__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(17);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["b"]; });
-/**
- * @license
- * Copyright 2019 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 61 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(18);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__component__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation__ = __webpack_require__(9);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__foundation__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(19);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["b"]; });
 /**
@@ -13543,15 +14234,15 @@ var MDCNotchedOutlineFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 62 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(21);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation__ = __webpack_require__(11);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__foundation__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(22);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["b"]; });
 /**
@@ -13582,20 +14273,59 @@ var MDCNotchedOutlineFoundation = /** @class */ (function (_super) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 63 */
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(23);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation__ = __webpack_require__(24);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__foundation__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(25);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["b"]; });
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(8);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "util", function() { return __WEBPACK_IMPORTED_MODULE_0__util__; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component__ = __webpack_require__(7);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCRipple", function() { return __WEBPACK_IMPORTED_MODULE_1__component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(17);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__foundation__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__foundation__ = __webpack_require__(4);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCRippleFoundation", function() { return __WEBPACK_IMPORTED_MODULE_3__foundation__["a"]; });
 /**
  * @license
@@ -13627,20 +14357,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 64 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(26);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "util", function() { return __WEBPACK_IMPORTED_MODULE_0__util__; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component__ = __webpack_require__(71);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCSnackbar", function() { return __WEBPACK_IMPORTED_MODULE_1__component__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(5);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return __WEBPACK_IMPORTED_MODULE_2__constants__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__foundation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__foundation__ = __webpack_require__(27);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCSnackbarFoundation", function() { return __WEBPACK_IMPORTED_MODULE_3__foundation__["a"]; });
 /**
  * @license
@@ -13672,7 +14402,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 65 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13680,9 +14410,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_dom_ponyfill__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__foundation__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__foundation__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(26);
 /**
  * @license
  * Copyright 2018 Google Inc.
@@ -13845,6 +14575,1434 @@ var MDCSnackbar = /** @class */ (function (_super) {
 }(__WEBPACK_IMPORTED_MODULE_1__material_base_component__["a" /* MDCComponent */]));
 
 //# sourceMappingURL=component.js.map
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(73);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTabBar", function() { return __WEBPACK_IMPORTED_MODULE_0__component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(31);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return __WEBPACK_IMPORTED_MODULE_1__constants__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return __WEBPACK_IMPORTED_MODULE_1__constants__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__foundation__ = __webpack_require__(30);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MDCTabBarFoundation", function() { return __WEBPACK_IMPORTED_MODULE_2__foundation__["a"]; });
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabBar; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_tab_scroller_component__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_tab_component__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_tab_foundation__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__foundation__ = __webpack_require__(30);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+var strings = __WEBPACK_IMPORTED_MODULE_5__foundation__["a" /* MDCTabBarFoundation */].strings;
+var tabIdCounter = 0;
+var MDCTabBar = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabBar, _super);
+    function MDCTabBar() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTabBar.attachTo = function (root) {
+        return new MDCTabBar(root);
+    };
+    Object.defineProperty(MDCTabBar.prototype, "focusOnActivate", {
+        set: function (focusOnActivate) {
+            this.tabList_.forEach(function (tab) { return tab.focusOnActivate = focusOnActivate; });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabBar.prototype, "useAutomaticActivation", {
+        set: function (useAutomaticActivation) {
+            this.foundation_.setUseAutomaticActivation(useAutomaticActivation);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCTabBar.prototype.initialize = function (tabFactory, tabScrollerFactory) {
+        if (tabFactory === void 0) { tabFactory = function (el) { return new __WEBPACK_IMPORTED_MODULE_3__material_tab_component__["a" /* MDCTab */](el); }; }
+        if (tabScrollerFactory === void 0) { tabScrollerFactory = function (el) { return new __WEBPACK_IMPORTED_MODULE_2__material_tab_scroller_component__["a" /* MDCTabScroller */](el); }; }
+        this.tabList_ = this.instantiateTabs_(tabFactory);
+        this.tabScroller_ = this.instantiateTabScroller_(tabScrollerFactory);
+    };
+    MDCTabBar.prototype.initialSyncWithDOM = function () {
+        var _this = this;
+        this.handleTabInteraction_ = function (evt) { return _this.foundation_.handleTabInteraction(evt); };
+        this.handleKeyDown_ = function (evt) { return _this.foundation_.handleKeyDown(evt); };
+        this.listen(__WEBPACK_IMPORTED_MODULE_4__material_tab_foundation__["a" /* MDCTabFoundation */].strings.INTERACTED_EVENT, this.handleTabInteraction_);
+        this.listen('keydown', this.handleKeyDown_);
+        for (var i = 0; i < this.tabList_.length; i++) {
+            if (this.tabList_[i].active) {
+                this.scrollIntoView(i);
+                break;
+            }
+        }
+    };
+    MDCTabBar.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.unlisten(__WEBPACK_IMPORTED_MODULE_4__material_tab_foundation__["a" /* MDCTabFoundation */].strings.INTERACTED_EVENT, this.handleTabInteraction_);
+        this.unlisten('keydown', this.handleKeyDown_);
+        this.tabList_.forEach(function (tab) { return tab.destroy(); });
+        if (this.tabScroller_) {
+            this.tabScroller_.destroy();
+        }
+    };
+    MDCTabBar.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            scrollTo: function (scrollX) { return _this.tabScroller_.scrollTo(scrollX); },
+            incrementScroll: function (scrollXIncrement) { return _this.tabScroller_.incrementScroll(scrollXIncrement); },
+            getScrollPosition: function () { return _this.tabScroller_.getScrollPosition(); },
+            getScrollContentWidth: function () { return _this.tabScroller_.getScrollContentWidth(); },
+            getOffsetWidth: function () { return _this.root_.offsetWidth; },
+            isRTL: function () { return window.getComputedStyle(_this.root_).getPropertyValue('direction') === 'rtl'; },
+            setActiveTab: function (index) { return _this.foundation_.activateTab(index); },
+            activateTabAtIndex: function (index, clientRect) { return _this.tabList_[index].activate(clientRect); },
+            deactivateTabAtIndex: function (index) { return _this.tabList_[index].deactivate(); },
+            focusTabAtIndex: function (index) { return _this.tabList_[index].focus(); },
+            getTabIndicatorClientRectAtIndex: function (index) { return _this.tabList_[index].computeIndicatorClientRect(); },
+            getTabDimensionsAtIndex: function (index) { return _this.tabList_[index].computeDimensions(); },
+            getPreviousActiveTabIndex: function () {
+                for (var i = 0; i < _this.tabList_.length; i++) {
+                    if (_this.tabList_[i].active) {
+                        return i;
+                    }
+                }
+                return -1;
+            },
+            getFocusedTabIndex: function () {
+                var tabElements = _this.getTabElements_();
+                var activeElement = document.activeElement;
+                return tabElements.indexOf(activeElement);
+            },
+            getIndexOfTabById: function (id) {
+                for (var i = 0; i < _this.tabList_.length; i++) {
+                    if (_this.tabList_[i].id === id) {
+                        return i;
+                    }
+                }
+                return -1;
+            },
+            getTabListLength: function () { return _this.tabList_.length; },
+            notifyTabActivated: function (index) {
+                return _this.emit(strings.TAB_ACTIVATED_EVENT, { index: index }, true);
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new __WEBPACK_IMPORTED_MODULE_5__foundation__["a" /* MDCTabBarFoundation */](adapter);
+    };
+    /**
+     * Activates the tab at the given index
+     * @param index The index of the tab
+     */
+    MDCTabBar.prototype.activateTab = function (index) {
+        this.foundation_.activateTab(index);
+    };
+    /**
+     * Scrolls the tab at the given index into view
+     * @param index THe index of the tab
+     */
+    MDCTabBar.prototype.scrollIntoView = function (index) {
+        this.foundation_.scrollIntoView(index);
+    };
+    /**
+     * Returns all the tab elements in a nice clean array
+     */
+    MDCTabBar.prototype.getTabElements_ = function () {
+        return [].slice.call(this.root_.querySelectorAll(strings.TAB_SELECTOR));
+    };
+    /**
+     * Instantiates tab components on all child tab elements
+     */
+    MDCTabBar.prototype.instantiateTabs_ = function (tabFactory) {
+        return this.getTabElements_().map(function (el) {
+            el.id = el.id || "mdc-tab-" + ++tabIdCounter;
+            return tabFactory(el);
+        });
+    };
+    /**
+     * Instantiates tab scroller component on the child tab scroller element
+     */
+    MDCTabBar.prototype.instantiateTabScroller_ = function (tabScrollerFactory) {
+        var tabScrollerElement = this.root_.querySelector(strings.TAB_SCROLLER_SELECTOR);
+        if (tabScrollerElement) {
+            return tabScrollerFactory(tabScrollerElement);
+        }
+        return null;
+    };
+    return MDCTabBar;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_component__["a" /* MDCComponent */]));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+/* 74 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabScroller; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_dom_events__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_dom_ponyfill__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__foundation__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(79);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+var MDCTabScroller = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabScroller, _super);
+    function MDCTabScroller() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTabScroller.attachTo = function (root) {
+        return new MDCTabScroller(root);
+    };
+    MDCTabScroller.prototype.initialize = function () {
+        this.area_ = this.root_.querySelector(__WEBPACK_IMPORTED_MODULE_4__foundation__["a" /* MDCTabScrollerFoundation */].strings.AREA_SELECTOR);
+        this.content_ = this.root_.querySelector(__WEBPACK_IMPORTED_MODULE_4__foundation__["a" /* MDCTabScrollerFoundation */].strings.CONTENT_SELECTOR);
+    };
+    MDCTabScroller.prototype.initialSyncWithDOM = function () {
+        var _this = this;
+        this.handleInteraction_ = function () { return _this.foundation_.handleInteraction(); };
+        this.handleTransitionEnd_ = function (evt) { return _this.foundation_.handleTransitionEnd(evt); };
+        this.area_.addEventListener('wheel', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.addEventListener('touchstart', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.addEventListener('pointerdown', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.addEventListener('mousedown', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.addEventListener('keydown', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.content_.addEventListener('transitionend', this.handleTransitionEnd_);
+    };
+    MDCTabScroller.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.area_.removeEventListener('wheel', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.removeEventListener('touchstart', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.removeEventListener('pointerdown', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.removeEventListener('mousedown', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.area_.removeEventListener('keydown', this.handleInteraction_, Object(__WEBPACK_IMPORTED_MODULE_2__material_dom_events__["a" /* applyPassive */])());
+        this.content_.removeEventListener('transitionend', this.handleTransitionEnd_);
+    };
+    MDCTabScroller.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            eventTargetMatchesSelector: function (evtTarget, selector) { return Object(__WEBPACK_IMPORTED_MODULE_3__material_dom_ponyfill__["c" /* matches */])(evtTarget, selector); },
+            addClass: function (className) { return _this.root_.classList.add(className); },
+            removeClass: function (className) { return _this.root_.classList.remove(className); },
+            addScrollAreaClass: function (className) { return _this.area_.classList.add(className); },
+            setScrollAreaStyleProperty: function (prop, value) { return _this.area_.style.setProperty(prop, value); },
+            setScrollContentStyleProperty: function (prop, value) { return _this.content_.style.setProperty(prop, value); },
+            getScrollContentStyleValue: function (propName) { return window.getComputedStyle(_this.content_).getPropertyValue(propName); },
+            setScrollAreaScrollLeft: function (scrollX) { return _this.area_.scrollLeft = scrollX; },
+            getScrollAreaScrollLeft: function () { return _this.area_.scrollLeft; },
+            getScrollContentOffsetWidth: function () { return _this.content_.offsetWidth; },
+            getScrollAreaOffsetWidth: function () { return _this.area_.offsetWidth; },
+            computeScrollAreaClientRect: function () { return _this.area_.getBoundingClientRect(); },
+            computeScrollContentClientRect: function () { return _this.content_.getBoundingClientRect(); },
+            computeHorizontalScrollbarHeight: function () { return __WEBPACK_IMPORTED_MODULE_5__util__["a" /* computeHorizontalScrollbarHeight */](document); },
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new __WEBPACK_IMPORTED_MODULE_4__foundation__["a" /* MDCTabScrollerFoundation */](adapter);
+    };
+    /**
+     * Returns the current visual scroll position
+     */
+    MDCTabScroller.prototype.getScrollPosition = function () {
+        return this.foundation_.getScrollPosition();
+    };
+    /**
+     * Returns the width of the scroll content
+     */
+    MDCTabScroller.prototype.getScrollContentWidth = function () {
+        return this.content_.offsetWidth;
+    };
+    /**
+     * Increments the scroll value by the given amount
+     * @param scrollXIncrement The pixel value by which to increment the scroll value
+     */
+    MDCTabScroller.prototype.incrementScroll = function (scrollXIncrement) {
+        this.foundation_.incrementScroll(scrollXIncrement);
+    };
+    /**
+     * Scrolls to the given pixel position
+     * @param scrollX The pixel value to scroll to
+     */
+    MDCTabScroller.prototype.scrollTo = function (scrollX) {
+        this.foundation_.scrollTo(scrollX);
+    };
+    return MDCTabScroller;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_component__["a" /* MDCComponent */]));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabScrollerFoundation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_foundation__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rtl_default_scroller__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__rtl_negative_scroller__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__rtl_reverse_scroller__ = __webpack_require__(78);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+var MDCTabScrollerFoundation = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabScrollerFoundation, _super);
+    function MDCTabScrollerFoundation(adapter) {
+        var _this = _super.call(this, Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])(Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])({}, MDCTabScrollerFoundation.defaultAdapter), adapter)) || this;
+        /**
+         * Controls whether we should handle the transitionend and interaction events during the animation.
+         */
+        _this.isAnimating_ = false;
+        return _this;
+    }
+    Object.defineProperty(MDCTabScrollerFoundation, "cssClasses", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* cssClasses */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabScrollerFoundation, "strings", {
+        get: function () {
+            return __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTabScrollerFoundation, "defaultAdapter", {
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                eventTargetMatchesSelector: function () { return false; },
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                addScrollAreaClass: function () { return undefined; },
+                setScrollAreaStyleProperty: function () { return undefined; },
+                setScrollContentStyleProperty: function () { return undefined; },
+                getScrollContentStyleValue: function () { return ''; },
+                setScrollAreaScrollLeft: function () { return undefined; },
+                getScrollAreaScrollLeft: function () { return 0; },
+                getScrollContentOffsetWidth: function () { return 0; },
+                getScrollAreaOffsetWidth: function () { return 0; },
+                computeScrollAreaClientRect: function () { return ({ top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 }); },
+                computeScrollContentClientRect: function () { return ({ top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 }); },
+                computeHorizontalScrollbarHeight: function () { return 0; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCTabScrollerFoundation.prototype.init = function () {
+        // Compute horizontal scrollbar height on scroller with overflow initially hidden, then update overflow to scroll
+        // and immediately adjust bottom margin to avoid the scrollbar initially appearing before JS runs.
+        var horizontalScrollbarHeight = this.adapter_.computeHorizontalScrollbarHeight();
+        this.adapter_.setScrollAreaStyleProperty('margin-bottom', -horizontalScrollbarHeight + 'px');
+        this.adapter_.addScrollAreaClass(MDCTabScrollerFoundation.cssClasses.SCROLL_AREA_SCROLL);
+    };
+    /**
+     * Computes the current visual scroll position
+     */
+    MDCTabScrollerFoundation.prototype.getScrollPosition = function () {
+        if (this.isRTL_()) {
+            return this.computeCurrentScrollPositionRTL_();
+        }
+        var currentTranslateX = this.calculateCurrentTranslateX_();
+        var scrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        return scrollLeft - currentTranslateX;
+    };
+    /**
+     * Handles interaction events that occur during transition
+     */
+    MDCTabScrollerFoundation.prototype.handleInteraction = function () {
+        // Early exit if we aren't animating
+        if (!this.isAnimating_) {
+            return;
+        }
+        // Prevent other event listeners from handling this event
+        this.stopScrollAnimation_();
+    };
+    /**
+     * Handles the transitionend event
+     */
+    MDCTabScrollerFoundation.prototype.handleTransitionEnd = function (evt) {
+        // Early exit if we aren't animating or the event was triggered by a different element.
+        var evtTarget = evt.target;
+        if (!this.isAnimating_ ||
+            !this.adapter_.eventTargetMatchesSelector(evtTarget, MDCTabScrollerFoundation.strings.CONTENT_SELECTOR)) {
+            return;
+        }
+        this.isAnimating_ = false;
+        this.adapter_.removeClass(MDCTabScrollerFoundation.cssClasses.ANIMATING);
+    };
+    /**
+     * Increment the scroll value by the scrollXIncrement using animation.
+     * @param scrollXIncrement The value by which to increment the scroll position
+     */
+    MDCTabScrollerFoundation.prototype.incrementScroll = function (scrollXIncrement) {
+        // Early exit for non-operational increment values
+        if (scrollXIncrement === 0) {
+            return;
+        }
+        this.animate_(this.getIncrementScrollOperation_(scrollXIncrement));
+    };
+    /**
+     * Increment the scroll value by the scrollXIncrement without animation.
+     * @param scrollXIncrement The value by which to increment the scroll position
+     */
+    MDCTabScrollerFoundation.prototype.incrementScrollImmediate = function (scrollXIncrement) {
+        // Early exit for non-operational increment values
+        if (scrollXIncrement === 0) {
+            return;
+        }
+        var operation = this.getIncrementScrollOperation_(scrollXIncrement);
+        if (operation.scrollDelta === 0) {
+            return;
+        }
+        this.stopScrollAnimation_();
+        this.adapter_.setScrollAreaScrollLeft(operation.finalScrollPosition);
+    };
+    /**
+     * Scrolls to the given scrollX value
+     */
+    MDCTabScrollerFoundation.prototype.scrollTo = function (scrollX) {
+        if (this.isRTL_()) {
+            return this.scrollToRTL_(scrollX);
+        }
+        this.scrollTo_(scrollX);
+    };
+    /**
+     * @return Browser-specific {@link MDCTabScrollerRTL} instance.
+     */
+    MDCTabScrollerFoundation.prototype.getRTLScroller = function () {
+        if (!this.rtlScrollerInstance_) {
+            this.rtlScrollerInstance_ = this.rtlScrollerFactory_();
+        }
+        return this.rtlScrollerInstance_;
+    };
+    /**
+     * @return translateX value from a CSS matrix transform function string.
+     */
+    MDCTabScrollerFoundation.prototype.calculateCurrentTranslateX_ = function () {
+        var transformValue = this.adapter_.getScrollContentStyleValue('transform');
+        // Early exit if no transform is present
+        if (transformValue === 'none') {
+            return 0;
+        }
+        // The transform value comes back as a matrix transformation in the form
+        // of `matrix(a, b, c, d, tx, ty)`. We only care about tx (translateX) so
+        // we're going to grab all the parenthesized values, strip out tx, and
+        // parse it.
+        var match = /\((.+?)\)/.exec(transformValue);
+        if (!match) {
+            return 0;
+        }
+        var matrixParams = match[1];
+        // tslint:disable-next-line:ban-ts-ignore "Unused vars" should be a linter warning, not a compiler error.
+        // @ts-ignore These unused variables should retain their semantic names for clarity.
+        var _a = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __read */])(matrixParams.split(','), 6), a = _a[0], b = _a[1], c = _a[2], d = _a[3], tx = _a[4], ty = _a[5];
+        return parseFloat(tx); // tslint:disable-line:ban
+    };
+    /**
+     * Calculates a safe scroll value that is > 0 and < the max scroll value
+     * @param scrollX The distance to scroll
+     */
+    MDCTabScrollerFoundation.prototype.clampScrollValue_ = function (scrollX) {
+        var edges = this.calculateScrollEdges_();
+        return Math.min(Math.max(edges.left, scrollX), edges.right);
+    };
+    MDCTabScrollerFoundation.prototype.computeCurrentScrollPositionRTL_ = function () {
+        var translateX = this.calculateCurrentTranslateX_();
+        return this.getRTLScroller().getScrollPositionRTL(translateX);
+    };
+    MDCTabScrollerFoundation.prototype.calculateScrollEdges_ = function () {
+        var contentWidth = this.adapter_.getScrollContentOffsetWidth();
+        var rootWidth = this.adapter_.getScrollAreaOffsetWidth();
+        return {
+            left: 0,
+            right: contentWidth - rootWidth,
+        };
+    };
+    /**
+     * Internal scroll method
+     * @param scrollX The new scroll position
+     */
+    MDCTabScrollerFoundation.prototype.scrollTo_ = function (scrollX) {
+        var currentScrollX = this.getScrollPosition();
+        var safeScrollX = this.clampScrollValue_(scrollX);
+        var scrollDelta = safeScrollX - currentScrollX;
+        this.animate_({
+            finalScrollPosition: safeScrollX,
+            scrollDelta: scrollDelta,
+        });
+    };
+    /**
+     * Internal RTL scroll method
+     * @param scrollX The new scroll position
+     */
+    MDCTabScrollerFoundation.prototype.scrollToRTL_ = function (scrollX) {
+        var animation = this.getRTLScroller().scrollToRTL(scrollX);
+        this.animate_(animation);
+    };
+    /**
+     * Internal method to compute the increment scroll operation values.
+     * @param scrollX The desired scroll position increment
+     * @return MDCTabScrollerAnimation with the sanitized values for performing the scroll operation.
+     */
+    MDCTabScrollerFoundation.prototype.getIncrementScrollOperation_ = function (scrollX) {
+        if (this.isRTL_()) {
+            return this.getRTLScroller().incrementScrollRTL(scrollX);
+        }
+        var currentScrollX = this.getScrollPosition();
+        var targetScrollX = scrollX + currentScrollX;
+        var safeScrollX = this.clampScrollValue_(targetScrollX);
+        var scrollDelta = safeScrollX - currentScrollX;
+        return {
+            finalScrollPosition: safeScrollX,
+            scrollDelta: scrollDelta,
+        };
+    };
+    /**
+     * Animates the tab scrolling
+     * @param animation The animation to apply
+     */
+    MDCTabScrollerFoundation.prototype.animate_ = function (animation) {
+        var _this = this;
+        // Early exit if translateX is 0, which means there's no animation to perform
+        if (animation.scrollDelta === 0) {
+            return;
+        }
+        this.stopScrollAnimation_();
+        // This animation uses the FLIP approach.
+        // Read more here: https://aerotwist.com/blog/flip-your-animations/
+        this.adapter_.setScrollAreaScrollLeft(animation.finalScrollPosition);
+        this.adapter_.setScrollContentStyleProperty('transform', "translateX(" + animation.scrollDelta + "px)");
+        // Force repaint
+        this.adapter_.computeScrollAreaClientRect();
+        requestAnimationFrame(function () {
+            _this.adapter_.addClass(MDCTabScrollerFoundation.cssClasses.ANIMATING);
+            _this.adapter_.setScrollContentStyleProperty('transform', 'none');
+        });
+        this.isAnimating_ = true;
+    };
+    /**
+     * Stops scroll animation
+     */
+    MDCTabScrollerFoundation.prototype.stopScrollAnimation_ = function () {
+        this.isAnimating_ = false;
+        var currentScrollPosition = this.getAnimatingScrollPosition_();
+        this.adapter_.removeClass(MDCTabScrollerFoundation.cssClasses.ANIMATING);
+        this.adapter_.setScrollContentStyleProperty('transform', 'translateX(0px)');
+        this.adapter_.setScrollAreaScrollLeft(currentScrollPosition);
+    };
+    /**
+     * Gets the current scroll position during animation
+     */
+    MDCTabScrollerFoundation.prototype.getAnimatingScrollPosition_ = function () {
+        var currentTranslateX = this.calculateCurrentTranslateX_();
+        var scrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        if (this.isRTL_()) {
+            return this.getRTLScroller().getAnimatingScrollPosition(scrollLeft, currentTranslateX);
+        }
+        return scrollLeft - currentTranslateX;
+    };
+    /**
+     * Determines the RTL Scroller to use
+     */
+    MDCTabScrollerFoundation.prototype.rtlScrollerFactory_ = function () {
+        // Browsers have three different implementations of scrollLeft in RTL mode,
+        // dependent on the browser. The behavior is based off the max LTR
+        // scrollLeft value and 0.
+        //
+        // * Default scrolling in RTL *
+        //    - Left-most value: 0
+        //    - Right-most value: Max LTR scrollLeft value
+        //
+        // * Negative scrolling in RTL *
+        //    - Left-most value: Negated max LTR scrollLeft value
+        //    - Right-most value: 0
+        //
+        // * Reverse scrolling in RTL *
+        //    - Left-most value: Max LTR scrollLeft value
+        //    - Right-most value: 0
+        //
+        // We use those principles below to determine which RTL scrollLeft
+        // behavior is implemented in the current browser.
+        var initialScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        this.adapter_.setScrollAreaScrollLeft(initialScrollLeft - 1);
+        var newScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        // If the newScrollLeft value is negative,then we know that the browser has
+        // implemented negative RTL scrolling, since all other implementations have
+        // only positive values.
+        if (newScrollLeft < 0) {
+            // Undo the scrollLeft test check
+            this.adapter_.setScrollAreaScrollLeft(initialScrollLeft);
+            return new __WEBPACK_IMPORTED_MODULE_4__rtl_negative_scroller__["a" /* MDCTabScrollerRTLNegative */](this.adapter_);
+        }
+        var rootClientRect = this.adapter_.computeScrollAreaClientRect();
+        var contentClientRect = this.adapter_.computeScrollContentClientRect();
+        var rightEdgeDelta = Math.round(contentClientRect.right - rootClientRect.right);
+        // Undo the scrollLeft test check
+        this.adapter_.setScrollAreaScrollLeft(initialScrollLeft);
+        // By calculating the clientRect of the root element and the clientRect of
+        // the content element, we can determine how much the scroll value changed
+        // when we performed the scrollLeft subtraction above.
+        if (rightEdgeDelta === newScrollLeft) {
+            return new __WEBPACK_IMPORTED_MODULE_5__rtl_reverse_scroller__["a" /* MDCTabScrollerRTLReverse */](this.adapter_);
+        }
+        return new __WEBPACK_IMPORTED_MODULE_3__rtl_default_scroller__["a" /* MDCTabScrollerRTLDefault */](this.adapter_);
+    };
+    MDCTabScrollerFoundation.prototype.isRTL_ = function () {
+        return this.adapter_.getScrollContentStyleValue('direction') === 'rtl';
+    };
+    return MDCTabScrollerFoundation;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_foundation__["a" /* MDCFoundation */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabScrollerFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabScrollerRTLDefault; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rtl_scroller__ = __webpack_require__(12);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+var MDCTabScrollerRTLDefault = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabScrollerRTLDefault, _super);
+    function MDCTabScrollerRTLDefault() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTabScrollerRTLDefault.prototype.getScrollPositionRTL = function () {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        var right = this.calculateScrollEdges_().right;
+        // Scroll values on most browsers are ints instead of floats so we round
+        return Math.round(right - currentScrollLeft);
+    };
+    MDCTabScrollerRTLDefault.prototype.scrollToRTL = function (scrollX) {
+        var edges = this.calculateScrollEdges_();
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        var clampedScrollLeft = this.clampScrollValue_(edges.right - scrollX);
+        return {
+            finalScrollPosition: clampedScrollLeft,
+            scrollDelta: clampedScrollLeft - currentScrollLeft,
+        };
+    };
+    MDCTabScrollerRTLDefault.prototype.incrementScrollRTL = function (scrollX) {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        var clampedScrollLeft = this.clampScrollValue_(currentScrollLeft - scrollX);
+        return {
+            finalScrollPosition: clampedScrollLeft,
+            scrollDelta: clampedScrollLeft - currentScrollLeft,
+        };
+    };
+    MDCTabScrollerRTLDefault.prototype.getAnimatingScrollPosition = function (scrollX) {
+        return scrollX;
+    };
+    MDCTabScrollerRTLDefault.prototype.calculateScrollEdges_ = function () {
+        var contentWidth = this.adapter_.getScrollContentOffsetWidth();
+        var rootWidth = this.adapter_.getScrollAreaOffsetWidth();
+        return {
+            left: 0,
+            right: contentWidth - rootWidth,
+        };
+    };
+    MDCTabScrollerRTLDefault.prototype.clampScrollValue_ = function (scrollX) {
+        var edges = this.calculateScrollEdges_();
+        return Math.min(Math.max(edges.left, scrollX), edges.right);
+    };
+    return MDCTabScrollerRTLDefault;
+}(__WEBPACK_IMPORTED_MODULE_1__rtl_scroller__["a" /* MDCTabScrollerRTL */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabScrollerRTLDefault);
+//# sourceMappingURL=rtl-default-scroller.js.map
+
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabScrollerRTLNegative; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rtl_scroller__ = __webpack_require__(12);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+var MDCTabScrollerRTLNegative = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabScrollerRTLNegative, _super);
+    function MDCTabScrollerRTLNegative() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTabScrollerRTLNegative.prototype.getScrollPositionRTL = function (translateX) {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        return Math.round(translateX - currentScrollLeft);
+    };
+    MDCTabScrollerRTLNegative.prototype.scrollToRTL = function (scrollX) {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        var clampedScrollLeft = this.clampScrollValue_(-scrollX);
+        return {
+            finalScrollPosition: clampedScrollLeft,
+            scrollDelta: clampedScrollLeft - currentScrollLeft,
+        };
+    };
+    MDCTabScrollerRTLNegative.prototype.incrementScrollRTL = function (scrollX) {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        var clampedScrollLeft = this.clampScrollValue_(currentScrollLeft - scrollX);
+        return {
+            finalScrollPosition: clampedScrollLeft,
+            scrollDelta: clampedScrollLeft - currentScrollLeft,
+        };
+    };
+    MDCTabScrollerRTLNegative.prototype.getAnimatingScrollPosition = function (scrollX, translateX) {
+        return scrollX - translateX;
+    };
+    MDCTabScrollerRTLNegative.prototype.calculateScrollEdges_ = function () {
+        var contentWidth = this.adapter_.getScrollContentOffsetWidth();
+        var rootWidth = this.adapter_.getScrollAreaOffsetWidth();
+        return {
+            left: rootWidth - contentWidth,
+            right: 0,
+        };
+    };
+    MDCTabScrollerRTLNegative.prototype.clampScrollValue_ = function (scrollX) {
+        var edges = this.calculateScrollEdges_();
+        return Math.max(Math.min(edges.right, scrollX), edges.left);
+    };
+    return MDCTabScrollerRTLNegative;
+}(__WEBPACK_IMPORTED_MODULE_1__rtl_scroller__["a" /* MDCTabScrollerRTL */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabScrollerRTLNegative);
+//# sourceMappingURL=rtl-negative-scroller.js.map
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabScrollerRTLReverse; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rtl_scroller__ = __webpack_require__(12);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+var MDCTabScrollerRTLReverse = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabScrollerRTLReverse, _super);
+    function MDCTabScrollerRTLReverse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTabScrollerRTLReverse.prototype.getScrollPositionRTL = function (translateX) {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        // Scroll values on most browsers are ints instead of floats so we round
+        return Math.round(currentScrollLeft - translateX);
+    };
+    MDCTabScrollerRTLReverse.prototype.scrollToRTL = function (scrollX) {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        var clampedScrollLeft = this.clampScrollValue_(scrollX);
+        return {
+            finalScrollPosition: clampedScrollLeft,
+            scrollDelta: currentScrollLeft - clampedScrollLeft,
+        };
+    };
+    MDCTabScrollerRTLReverse.prototype.incrementScrollRTL = function (scrollX) {
+        var currentScrollLeft = this.adapter_.getScrollAreaScrollLeft();
+        var clampedScrollLeft = this.clampScrollValue_(currentScrollLeft + scrollX);
+        return {
+            finalScrollPosition: clampedScrollLeft,
+            scrollDelta: currentScrollLeft - clampedScrollLeft,
+        };
+    };
+    MDCTabScrollerRTLReverse.prototype.getAnimatingScrollPosition = function (scrollX, translateX) {
+        return scrollX + translateX;
+    };
+    MDCTabScrollerRTLReverse.prototype.calculateScrollEdges_ = function () {
+        var contentWidth = this.adapter_.getScrollContentOffsetWidth();
+        var rootWidth = this.adapter_.getScrollAreaOffsetWidth();
+        return {
+            left: contentWidth - rootWidth,
+            right: 0,
+        };
+    };
+    MDCTabScrollerRTLReverse.prototype.clampScrollValue_ = function (scrollX) {
+        var edges = this.calculateScrollEdges_();
+        return Math.min(Math.max(edges.right, scrollX), edges.left);
+    };
+    return MDCTabScrollerRTLReverse;
+}(__WEBPACK_IMPORTED_MODULE_1__rtl_scroller__["a" /* MDCTabScrollerRTL */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCTabScrollerRTLReverse);
+//# sourceMappingURL=rtl-reverse-scroller.js.map
+
+/***/ }),
+/* 79 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = computeHorizontalScrollbarHeight;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(28);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+/**
+ * Stores result from computeHorizontalScrollbarHeight to avoid redundant processing.
+ */
+var horizontalScrollbarHeight_;
+/**
+ * Computes the height of browser-rendered horizontal scrollbars using a self-created test element.
+ * May return 0 (e.g. on OS X browsers under default configuration).
+ */
+function computeHorizontalScrollbarHeight(documentObj, shouldCacheResult) {
+    if (shouldCacheResult === void 0) { shouldCacheResult = true; }
+    if (shouldCacheResult && typeof horizontalScrollbarHeight_ !== 'undefined') {
+        return horizontalScrollbarHeight_;
+    }
+    var el = documentObj.createElement('div');
+    el.classList.add(__WEBPACK_IMPORTED_MODULE_0__constants__["a" /* cssClasses */].SCROLL_TEST);
+    documentObj.body.appendChild(el);
+    var horizontalScrollbarHeight = el.offsetHeight - el.clientHeight;
+    documentObj.body.removeChild(el);
+    if (shouldCacheResult) {
+        horizontalScrollbarHeight_ = horizontalScrollbarHeight;
+    }
+    return horizontalScrollbarHeight;
+}
+//# sourceMappingURL=util.js.map
+
+/***/ }),
+/* 80 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTab; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ripple_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ripple_foundation__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_tab_indicator_component__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__foundation__ = __webpack_require__(29);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+var MDCTab = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTab, _super);
+    function MDCTab() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTab.attachTo = function (root) {
+        return new MDCTab(root);
+    };
+    MDCTab.prototype.initialize = function (rippleFactory, tabIndicatorFactory) {
+        if (rippleFactory === void 0) { rippleFactory = function (el, foundation) { return new __WEBPACK_IMPORTED_MODULE_2__material_ripple_component__["a" /* MDCRipple */](el, foundation); }; }
+        if (tabIndicatorFactory === void 0) { tabIndicatorFactory = function (el) { return new __WEBPACK_IMPORTED_MODULE_4__material_tab_indicator_component__["a" /* MDCTabIndicator */](el); }; }
+        this.id = this.root_.id;
+        var rippleSurface = this.root_.querySelector(__WEBPACK_IMPORTED_MODULE_5__foundation__["a" /* MDCTabFoundation */].strings.RIPPLE_SELECTOR);
+        var rippleAdapter = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])(Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["a" /* __assign */])({}, __WEBPACK_IMPORTED_MODULE_2__material_ripple_component__["a" /* MDCRipple */].createAdapter(this)), { addClass: function (className) { return rippleSurface.classList.add(className); }, removeClass: function (className) { return rippleSurface.classList.remove(className); }, updateCssVariable: function (varName, value) { return rippleSurface.style.setProperty(varName, value); } });
+        var rippleFoundation = new __WEBPACK_IMPORTED_MODULE_3__material_ripple_foundation__["a" /* MDCRippleFoundation */](rippleAdapter);
+        this.ripple_ = rippleFactory(this.root_, rippleFoundation);
+        var tabIndicatorElement = this.root_.querySelector(__WEBPACK_IMPORTED_MODULE_5__foundation__["a" /* MDCTabFoundation */].strings.TAB_INDICATOR_SELECTOR);
+        this.tabIndicator_ = tabIndicatorFactory(tabIndicatorElement);
+        this.content_ = this.root_.querySelector(__WEBPACK_IMPORTED_MODULE_5__foundation__["a" /* MDCTabFoundation */].strings.CONTENT_SELECTOR);
+    };
+    MDCTab.prototype.initialSyncWithDOM = function () {
+        var _this = this;
+        this.handleClick_ = function () { return _this.foundation_.handleClick(); };
+        this.listen('click', this.handleClick_);
+    };
+    MDCTab.prototype.destroy = function () {
+        this.unlisten('click', this.handleClick_);
+        this.ripple_.destroy();
+        _super.prototype.destroy.call(this);
+    };
+    MDCTab.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            setAttr: function (attr, value) { return _this.root_.setAttribute(attr, value); },
+            addClass: function (className) { return _this.root_.classList.add(className); },
+            removeClass: function (className) { return _this.root_.classList.remove(className); },
+            hasClass: function (className) { return _this.root_.classList.contains(className); },
+            activateIndicator: function (previousIndicatorClientRect) { return _this.tabIndicator_.activate(previousIndicatorClientRect); },
+            deactivateIndicator: function () { return _this.tabIndicator_.deactivate(); },
+            notifyInteracted: function () { return _this.emit(__WEBPACK_IMPORTED_MODULE_5__foundation__["a" /* MDCTabFoundation */].strings.INTERACTED_EVENT, { tabId: _this.id }, true /* bubble */); },
+            getOffsetLeft: function () { return _this.root_.offsetLeft; },
+            getOffsetWidth: function () { return _this.root_.offsetWidth; },
+            getContentOffsetLeft: function () { return _this.content_.offsetLeft; },
+            getContentOffsetWidth: function () { return _this.content_.offsetWidth; },
+            focus: function () { return _this.root_.focus(); },
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new __WEBPACK_IMPORTED_MODULE_5__foundation__["a" /* MDCTabFoundation */](adapter);
+    };
+    Object.defineProperty(MDCTab.prototype, "active", {
+        /**
+         * Getter for the active state of the tab
+         */
+        get: function () {
+            return this.foundation_.isActive();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTab.prototype, "focusOnActivate", {
+        set: function (focusOnActivate) {
+            this.foundation_.setFocusOnActivate(focusOnActivate);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Activates the tab
+     */
+    MDCTab.prototype.activate = function (computeIndicatorClientRect) {
+        this.foundation_.activate(computeIndicatorClientRect);
+    };
+    /**
+     * Deactivates the tab
+     */
+    MDCTab.prototype.deactivate = function () {
+        this.foundation_.deactivate();
+    };
+    /**
+     * Returns the indicator's client rect
+     */
+    MDCTab.prototype.computeIndicatorClientRect = function () {
+        return this.tabIndicator_.computeContentClientRect();
+    };
+    MDCTab.prototype.computeDimensions = function () {
+        return this.foundation_.computeDimensions();
+    };
+    /**
+     * Focuses the tab
+     */
+    MDCTab.prototype.focus = function () {
+        this.root_.focus();
+    };
+    return MDCTab;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_component__["a" /* MDCComponent */]));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCTabIndicator; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_base_component__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fading_foundation__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__foundation__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sliding_foundation__ = __webpack_require__(84);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+var MDCTabIndicator = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCTabIndicator, _super);
+    function MDCTabIndicator() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTabIndicator.attachTo = function (root) {
+        return new MDCTabIndicator(root);
+    };
+    MDCTabIndicator.prototype.initialize = function () {
+        this.content_ = this.root_.querySelector(__WEBPACK_IMPORTED_MODULE_3__foundation__["a" /* MDCTabIndicatorFoundation */].strings.CONTENT_SELECTOR);
+    };
+    MDCTabIndicator.prototype.computeContentClientRect = function () {
+        return this.foundation_.computeContentClientRect();
+    };
+    MDCTabIndicator.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function (className) { return _this.root_.classList.add(className); },
+            removeClass: function (className) { return _this.root_.classList.remove(className); },
+            computeContentClientRect: function () { return _this.content_.getBoundingClientRect(); },
+            setContentStyleProperty: function (prop, value) { return _this.content_.style.setProperty(prop, value); },
+        };
+        // tslint:enable:object-literal-sort-keys
+        if (this.root_.classList.contains(__WEBPACK_IMPORTED_MODULE_3__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.FADE)) {
+            return new __WEBPACK_IMPORTED_MODULE_2__fading_foundation__["a" /* MDCFadingTabIndicatorFoundation */](adapter);
+        }
+        // Default to the sliding indicator
+        return new __WEBPACK_IMPORTED_MODULE_4__sliding_foundation__["a" /* MDCSlidingTabIndicatorFoundation */](adapter);
+    };
+    MDCTabIndicator.prototype.activate = function (previousIndicatorClientRect) {
+        this.foundation_.activate(previousIndicatorClientRect);
+    };
+    MDCTabIndicator.prototype.deactivate = function () {
+        this.foundation_.deactivate();
+    };
+    return MDCTabIndicator;
+}(__WEBPACK_IMPORTED_MODULE_1__material_base_component__["a" /* MDCComponent */]));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+/* 82 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCFadingTabIndicatorFoundation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation__ = __webpack_require__(13);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+/* istanbul ignore next: subclass is not a branch statement */
+var MDCFadingTabIndicatorFoundation = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCFadingTabIndicatorFoundation, _super);
+    function MDCFadingTabIndicatorFoundation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCFadingTabIndicatorFoundation.prototype.activate = function () {
+        this.adapter_.addClass(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.ACTIVE);
+    };
+    MDCFadingTabIndicatorFoundation.prototype.deactivate = function () {
+        this.adapter_.removeClass(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.ACTIVE);
+    };
+    return MDCFadingTabIndicatorFoundation;
+}(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCFadingTabIndicatorFoundation);
+//# sourceMappingURL=fading-foundation.js.map
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return strings; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    ACTIVE: 'mdc-tab-indicator--active',
+    FADE: 'mdc-tab-indicator--fade',
+    NO_TRANSITION: 'mdc-tab-indicator--no-transition',
+};
+var strings = {
+    CONTENT_SELECTOR: '.mdc-tab-indicator__content',
+};
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDCSlidingTabIndicatorFoundation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation__ = __webpack_require__(13);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+/* istanbul ignore next: subclass is not a branch statement */
+var MDCSlidingTabIndicatorFoundation = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MDCSlidingTabIndicatorFoundation, _super);
+    function MDCSlidingTabIndicatorFoundation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCSlidingTabIndicatorFoundation.prototype.activate = function (previousIndicatorClientRect) {
+        // Early exit if no indicator is present to handle cases where an indicator
+        // may be activated without a prior indicator state
+        if (!previousIndicatorClientRect) {
+            this.adapter_.addClass(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.ACTIVE);
+            return;
+        }
+        // This animation uses the FLIP approach. You can read more about it at the link below:
+        // https://aerotwist.com/blog/flip-your-animations/
+        // Calculate the dimensions based on the dimensions of the previous indicator
+        var currentClientRect = this.computeContentClientRect();
+        var widthDelta = previousIndicatorClientRect.width / currentClientRect.width;
+        var xPosition = previousIndicatorClientRect.left - currentClientRect.left;
+        this.adapter_.addClass(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.NO_TRANSITION);
+        this.adapter_.setContentStyleProperty('transform', "translateX(" + xPosition + "px) scaleX(" + widthDelta + ")");
+        // Force repaint before updating classes and transform to ensure the transform properly takes effect
+        this.computeContentClientRect();
+        this.adapter_.removeClass(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.NO_TRANSITION);
+        this.adapter_.addClass(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.ACTIVE);
+        this.adapter_.setContentStyleProperty('transform', '');
+    };
+    MDCSlidingTabIndicatorFoundation.prototype.deactivate = function () {
+        this.adapter_.removeClass(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */].cssClasses.ACTIVE);
+    };
+    return MDCSlidingTabIndicatorFoundation;
+}(__WEBPACK_IMPORTED_MODULE_1__foundation__["a" /* MDCTabIndicatorFoundation */]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* unused harmony default export */ var _unused_webpack_default_export = (MDCSlidingTabIndicatorFoundation);
+//# sourceMappingURL=sliding-foundation.js.map
+
+/***/ }),
+/* 85 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return strings; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    ACTIVE: 'mdc-tab--active',
+};
+var strings = {
+    ARIA_SELECTED: 'aria-selected',
+    CONTENT_SELECTOR: '.mdc-tab__content',
+    INTERACTED_EVENT: 'MDCTab:interacted',
+    RIPPLE_SELECTOR: '.mdc-tab__ripple',
+    TABINDEX: 'tabIndex',
+    TAB_INDICATOR_SELECTOR: '.mdc-tab-indicator',
+};
+
+//# sourceMappingURL=constants.js.map
 
 /***/ })
 /******/ ]);
