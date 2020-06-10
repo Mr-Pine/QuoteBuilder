@@ -45,7 +45,7 @@ function copy() {
 
 
     if(textClassList || authorClassList){
-        openSnackbar("Please fill out all required (*) fields correctly", false)
+        openSnackbar("Bitte alle erforderlichen Felder (*) ausfüllen", false)
         return
     }
 
@@ -87,7 +87,7 @@ function copy() {
     
     copyText.prop("disabled", true);
 
-    openSnackbar("Copied", true)
+    openSnackbar("Kopiert!", true)
 }
 
 function clearAll() {
@@ -120,7 +120,7 @@ function clearAll() {
 
     author[0].parentElement.classList.remove("mdc-text-field--invalid")
 
-    openSnackbar("Cleared!", true)
+    openSnackbar("Gelöscht!", true)
 }
 
 function openSnackbar(text, positive){
