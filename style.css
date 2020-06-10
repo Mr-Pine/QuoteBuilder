@@ -32,15 +32,13 @@ body {
 
 .top-div {
     position        : fixed;
-    display         : table;
     background-color: #3c3c3c;
+    width         : 100%;
     /* border-bottom: thin solid white; */
 }
 
 .top {
-    display       : table-cell;
     vertical-align: middle;
-    width         : 100%;
 }
 
 .logo_div {
