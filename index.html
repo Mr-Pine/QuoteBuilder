@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuoteBuilder</title>
-    <link rel="icon" href="Logo.png">
+    <link rel="icon" href="Logo_icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -17,29 +17,57 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+
     <link href="style.css" rel="stylesheet" />
-    <link href="material.css" rel="stylesheet" />
-    <script src="material.js" async></script>
     <script src="script.js"></script>
+    <script src="secrets.js"></script>
+    <script src="directSendUtility.js"></script>
 </head>
 
 <body>
+    <div class="top-div">
+        <div class="logo_div">
+            <img class="logo" src="Logo_transparent.png" />
+            <p class="logo_text">
+                QuoteBuilder
+            </p>
+        </div>
+
+        <button class="mdc-button mdc-button--raised login" id="login-button" onclick="getNewCode()"
+            style="background-color: #475158; color: #7289DA;">
+            <div class="mdc-button__ripple copyRipple"></div>
+            <img src="Discord-Logo-White.svg" style="height: 24px;" />
+            <span class="mdc-button__label" style="padding-left: 4px;">
+                <b>
+                    Login
+                </b>
+            </span>
+        </button>
+
+    </div>
     <div class="input-div">
         <div id="text">
-            <label class="mdc-text-field mdc-text-field--textarea text input input" style="height: auto;">
-                <textarea rows="5" cols="40" required class="mdc-text-field__input input_field"
+            <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea text input"
+                style="height: auto;">
+                <textarea rows="5" cols="40" required class="mdc-text-field__input input_field resize"
                     aria-labelledby="text-label" autofocus name="text"
-                    style="margin-top: 15px !important; min-width: 400px !important;" id="text-input"></textarea>
+                    style="margin-top: 15px !important; width: 400px !important; overflow: hidden;"
+                    id="text-input"></textarea>
                 <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
-                    <span class="mdc-notched-outline__notch">
+                    <span class="mdc-notched-outline__notch" style="width: inherit !important;">
                         <span class="mdc-floating-label" id="text-label">Quote Text</span>
                     </span>
                     <span class="mdc-notched-outline__trailing"></span>
                 </span>
             </label>
             <div class="mdc-text-field-helper-line">
-                <div class="mdc-text-field-helper-text" aria-hidden="true">Der Inhalt des Quotes (erforderlich)<br/>Beispiel: "Dies ist ein deepes Quote"</div>
+                <div class="mdc-text-field-helper-text" aria-hidden="true">Der Inhalt des Quotes
+                    (erforderlich)<br />Beispiel: "Dies ist ein deepes Quote"</div>
             </div>
             <br />
 
@@ -56,7 +84,8 @@
                 </span>
             </label>
             <div class="mdc-text-field-helper-line">
-                <div class="mdc-text-field-helper-text" aria-hidden="true">Wer hat es gesagt (erforderlich)<br/>Beispiel: "Ich, der große QuoteBot"</div>
+                <div class="mdc-text-field-helper-text" aria-hidden="true">Wer hat es gesagt
+                    (erforderlich)<br />Beispiel: "Ich, der große QuoteBot"</div>
             </div>
             <br />
 
@@ -73,8 +102,10 @@
                 </span>
             </label>
             <div class="mdc-text-field-helper-line" style="width: 400px;">
-                <div class="mdc-text-field-helper-text" aria-hidden="true">Die Erwähnung des Autors (Wenn auf dem Server)<br />Beispiel: "QuoteBot" In discord @QuoteBot<br /><b
-                        style="font-style: italic; color: #ad001f;">Achtung! Bitte Erwähnungen in Discord überprüfen</b></div>
+                <div class="mdc-text-field-helper-text" aria-hidden="true">Die Erwähnung des Autors (Wenn auf dem
+                    Server)<br />Beispiel: "QuoteBot" In discord @QuoteBot<br /><b
+                        style="font-style: italic; color: #ad001f;">Achtung! Bitte Erwähnungen in Discord überprüfen</b>
+                </div>
             </div>
             <br />
 
@@ -98,23 +129,62 @@
                 </span>
             </label>
             <div class="mdc-text-field-helper-line">
-                <div class="mdc-text-field-helper-text" aria-hidden="true">Tags die zu dem Quote passen. Zum speichern eines Tags [ENTER] drücken.<br/>Tags mit kommata weden in zwei Tags aufgeteilt<br />Beispiel: ehre, deep</div>
+                <div class="mdc-text-field-helper-text" aria-hidden="true">Tags die zu dem Quote passen. Zum speichern
+                    eines Tags [ENTER] drücken.<br />Tags mit kommata weden in zwei Tags aufgeteilt<br />Beispiel: ehre,
+                    deep</div>
             </div>
         </div>
 
 
 
+        <div class="mdc-select mdc-select--outlined demo-enhanced-select mdc-select--required dropdown input logged-in" id="dropdown">
+            <div class="mdc-select__anchor" aria-required="true" aria-labelledby="outlined-select-label">
+                <span id="dropdown-selected-text" class="mdc-select__selected-text"></span>
+                <span class="mdc-select__dropdown-icon">
+                    <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+                        <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                            points="7 10 12 15 17 10">
+                        </polygon>
+                        <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                            points="7 15 12 10 17 15">
+                        </polygon>
+                    </svg>
+                </span>
+                <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__notch">
+                        <span id="outlined-select-label" class="mdc-floating-label">Server auswählen</span>
+                    </span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                </span>
+            </div>
 
+            <!-- Other elements from the select remain. -->
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                <ul class="mdc-list" id="dropdown-list">
+                </ul>
+              </div>
+        </div>
 
         <div id="buttons">
             <button class="mdc-button mdc-button--raised copy copyRipple" id="copy-button" onclick="copy()"
-                style="background-color: #6b6b6b; color: #00ab07;">
+                style="background-color: #475158; color: #00ab07;">
                 <div class="mdc-button__ripple copyRipple"></div>
                 <i class="material-icons mdc-button__icon" aria-hidden="true">assignment</i>
                 <span class="mdc-button__label">
                     Kopieren
                 </span>
             </button>
+
+            <button class="mdc-button mdc-button--raised send-direct logged-in" id="send-button" onclick="sendQuote()"
+                style="background-color: #475158; color: #7289DA;">
+                <div class="mdc-button__ripple copyRipple"></div>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">send</i>
+                <span class="mdc-button__label" style="padding-left: 4px;">
+                    Senden
+                </span>
+            </button>
+
             <button type="button" class="mdc-button mdc-button--outlined clear clearRipple" id="clear-button"
                 onclick="clearAll()" style="border-color: #ad001f; color: #ad001f;">
                 <div class="mdc-button__ripple clearRipple"></div>
@@ -125,7 +195,7 @@
             </button>
         </div>
 
-        <label class="mdc-text-field mdc-text-field--textarea copy-text input" id="copy-label"
+        <label class="mdc-text-field mdc-text-field--textarea mdc-text-field--outlined copy-text input" id="copy-label"
             style="height: auto; margin-top: 30pt;">
             <textarea class="mdc-text-field__input" aria-labelledby="copy-label" name="copy"
                 style="color: #8f8f8f;margin-top: 15px !important; min-width: 400px !important; height: 400px !important; cursor: text;"
@@ -148,45 +218,7 @@
         </div>
     </div>
 
-
-
     <div class="hover-image" style="position: fixed; bottom: 0; right: 0;"></div>
-
-    
-    <div class="top-div">
-        <div class="logo_div top">
-            <img class="logo" src="Logo.png" />
-            <p class="logo_text">
-                QuoteBuilder
-            </p>
-        </div>
-        <div class="mdc-tab-bar" role="tablist">
-            <div class="mdc-tab-scroller">
-              <div class="mdc-tab-scroller__scroll-area">
-                <div class="mdc-tab-scroller__scroll-content">
-                  <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                    <span class="mdc-tab__content">
-                      <span class="mdc-tab__text-label">QuoteBuilder</span>
-                    </span>
-                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                    </span>
-                    <span class="mdc-tab__ripple"></span>
-                  </button>
-                  <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                    <span class="mdc-tab__content">
-                      <span class="mdc-tab__text-label">CommandBuilder</span>
-                    </span>
-                    <span class="mdc-tab-indicator">
-                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                    </span>
-                    <span class="mdc-tab__ripple"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
 </body>
 
 </html>
