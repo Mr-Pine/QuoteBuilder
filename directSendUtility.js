@@ -1,6 +1,6 @@
 var authorizeURL = 'https://discord.com/api/oauth2/authorize';
 var tokenURL = 'https://discord.com/api/oauth2/token';
-var redirect_uri = "https://schweininchen.de/quotebuilder"
+var redirect_uri = "http://quotes.inch3n.de/builder/"
 let parameters = {}
 
 function getGetParameters() {
@@ -223,7 +223,7 @@ async function sendQuote() {
 
         var userID = await userJSON.id
 
-        response = await fetch("http://88.64.28.148:3000", {
+        response = await fetch("http://2.202.161.181:3000", {
             method: 'POST',
             mode: 'no-cors',
             headers: {
