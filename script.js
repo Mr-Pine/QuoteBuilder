@@ -72,10 +72,11 @@ function onBack(element, event) {
 function copy() {
     textClassList = $("#text-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
     authorClassList = $("#author-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
+    authorTagClassList = $("#author-tag-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
 
 
-    if (textClassList || authorClassList) {
-        openSnackbar("Bitte alle erforderlichen Felder (*) ausfüllen", false)
+    if (textClassList || authorClassList || authorTagClassList) {
+        openSnackbar("Bitte alle erforderlichen Felder (*) korrekt ausfüllen", false)
         return
     }
 
@@ -103,7 +104,7 @@ function generateQuoteText() {
     var author = document.getElementById("author-input").value
     var authorTag = document.getElementById("author-tag-input").value
     if (authorTag != "") {
-        authorTag = "@" + authorTag
+        authorTag = authorTag
     } else {
         authorTag = "none"
     }
@@ -152,6 +153,8 @@ function clearAll() {
     textInput[0].parentElement.classList.remove("mdc-text-field--invalid")
 
     author[0].parentElement.classList.remove("mdc-text-field--invalid")
+
+    $("#author-tag-input")[0].parentElement.classList.remove("mdc-text-field--invalid")
 
     openSnackbar("Gelöscht!", true)
 }
