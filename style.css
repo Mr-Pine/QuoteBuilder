@@ -4,6 +4,7 @@
     --dark-grey      : #23272A;
     --highlight-color: #7289DA;
     --background     : #2C2F33;
+    --mdc-theme-primary: var(--highlight-color)
 }
 
 body {
@@ -14,10 +15,6 @@ body {
 
 .logged-in {
     display: none;
-}
-
-.mdc-text-field .mdc-select {
-    --mdc-theme-primary: var(--highlight-color)
 }
 
 .hover-image {
