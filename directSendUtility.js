@@ -1,7 +1,7 @@
 var authorizeURL = 'https://discord.com/api/oauth2/authorize';
 var tokenURL = 'https://discord.com/api/oauth2/token';
 var redirect_uri = "http://localhost:8100/"//"http://quotes.inch3n.de/builder/"
-var serverURL = /*"http://2.202.161.181:3000"*/"http://localhost:3000"
+var serverURL = "http://2.202.161.181:3000"/* "http://localhost:3000" */
 let parameters = {}
 
 function getGetParameters() {

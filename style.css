@@ -93,10 +93,11 @@ body {
     justify-content: space-around;
 }
 
-button {
-    height      : 30px;
-    margin-right: 10px;
+
+.mdc-text-field:not(.mdc-text-field--focused)+.mdc-text-field-helper-line .mdc-text-field-helper-text{
+    display: none;
 }
+
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--light-grey);
