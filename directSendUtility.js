@@ -1,6 +1,7 @@
 var authorizeURL = 'https://discord.com/api/oauth2/authorize';
 var tokenURL = 'https://discord.com/api/oauth2/token';
-var redirect_uri = "http://quotes.inch3n.de/builder/"
+var redirect_uri = "http://localhost:8100/"//"http://quotes.inch3n.de/builder/"
+var serverURL = /*"http://2.202.161.181:3000"*/"http://localhost:3000"
 let parameters = {}
 
 function getGetParameters() {
@@ -17,7 +18,7 @@ function getGetParameters() {
     return bodyObject
 }
 
-function tryGetGuilds() {
+async function tryGetGuilds() {
     access_cookie = getCookie("access_token")
     refresh_cookie = getCookie("refresh_token")
 
@@ -33,31 +34,38 @@ function tryGetGuilds() {
                 console.log("Guilds!")
                 console.log(guildJSON)
 
-                defaultServer = getCookie("default_server")
+                getValidServers().then(validGuilds => {
 
-                guildJSON.forEach(guild => {
-                    if (guild.id == defaultServer) {
-                        $("#dropdown-list").append(`
+                    defaultServer = getCookie("default_server")
+
+                    guildJSON.forEach(guild => {
+                        valid = validGuilds.includes(guild.id)
+                        if (valid) {
+                            if (guild.id == defaultServer) {
+                                $("#dropdown-list").append(`
                         <li class="mdc-list-item mdc-list-item--selected" data-value="${guild.id}">
                           <span class="mdc-list-item__ripple"></span>
                           <span class="mdc-list-item__text">${guild.name}</span>
                         </li>`)
 
-                        $("#dropdown-selected-text").text(guild.name)
-                        
-                    } else {
-                        $("#dropdown-list").append(`
+                                $("#dropdown-selected-text").text(guild.name)
+
+                            } else {
+                                $("#dropdown-list").append(`
                         <li class="mdc-list-item" data-value="${guild.id}">
                           <span class="mdc-list-item__ripple"></span>
                           <span class="mdc-list-item__text">${guild.name}</span>
                         </li>`)
-                    }
+                            }
+                        }
 
-                    select.layout()
-                    select.layoutOptions()
+                        select.layout()
+                        select.layoutOptions()
+                    })
+
+                    $(".logged-in").show()
                 })
 
-                $(".logged-in").show()
 
             } else {
                 refreshAccessToken(refresh_cookie).then(tokenJSON => {
@@ -204,7 +212,7 @@ function getCookie(cookieName) {
 }
 
 async function sendQuote() {
-    
+
     textClassList = $("#text-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
     authorClassList = $("#author-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
     selectClassList = $(".dropdown")[0].classList.contains("mdc-select--invalid")
@@ -223,7 +231,7 @@ async function sendQuote() {
 
         var userID = await userJSON.id
 
-        response = await fetch("http://2.202.161.181:3000", {
+        response = await fetch(serverURL, {
             method: 'POST',
             mode: 'no-cors',
             headers: {
@@ -235,9 +243,20 @@ async function sendQuote() {
                 user: userID
             })
         })
+
+        console.log(response)
     })
 
     return await response
+}
+
+async function getValidServers() {
+    response = await fetch(serverURL + '/server-list', {
+        method: 'GET',
+        headers: { 'Content-Type': 'text/plain' }
+    })
+
+    return (await response.json())["servers"];
 }
 
 function storeServer() {
