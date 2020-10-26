@@ -6,6 +6,9 @@ var snackbar
 var select
 
 $(function () {
+    
+    new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch'));
+
     $("#copy-label").hide()
 
     initResize()
@@ -14,9 +17,11 @@ $(function () {
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.clearRipple'));
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.login'));
 
+
     const MDCTextField = mdc.textField.MDCTextField
     const MDCSnackbar = mdc.snackbar.MDCSnackbar
     const MDCSelect = mdc.select.MDCSelect
+    const MDCSwitch = mdc.switchControl.MDCSwitch
 
     snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
 
@@ -27,6 +32,12 @@ $(function () {
     const authorTag = new MDCTextField(document.querySelector('.author-tag'))
     const tags = new MDCTextField(document.querySelector('.tags'))
     const copyText = new MDCTextField(document.querySelector('.copy-text'))
+
+    
+    console.log(mdc)
+
+    
+
 
     select = new MDCSelect(document.querySelector('.dropdown'));
     //const select2 = new MDCSelect(document.querySelector('.dropdown2'));
