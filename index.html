@@ -12,7 +12,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" -->
 
 
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     <script src="secrets.js"></script>
     <script src="directSendUtility.js"></script>
 
-    
+
     <!-- Compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 </head>
@@ -51,15 +51,33 @@
 
     </div>
     <div class="input-div">
-        <div class="mdc-switch">
-            <div class="mdc-switch__track"></div>
-            <div class="mdc-switch__thumb-underlay">
-                <div class="mdc-switch__thumb">
-                    <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch">
+        <div class="edit_delete">
+            <label for="edit-switch">Edit quote</label>
+            <div class="mdc-switch">
+                <div class="mdc-switch__track"></div>
+                <div class="mdc-switch__thumb-underlay">
+                    <div class="mdc-switch__thumb">
+                        <input type="checkbox" id="edit-switch" class="mdc-switch__native-control" role="switch">
+                    </div>
                 </div>
             </div>
+            <div class="edit">
+                <span>hi</span>
+
+                <label class="mdc-text-field mdc-text-field--outlined number" style="max-width: 90px;">
+                    <input type="number" maxlength="4" class="mdc-text-field__input browser-default input_field" autocomplete="off"
+                        aria-labelledby="number-label" name="number" id="edit-number">
+                    <span class="mdc-notched-outline">
+                        <span class="mdc-notched-outline__leading"></span>
+                        <span class="mdc-notched-outline__notch">
+                            <span class="mdc-floating-label" id="number-label">Number</span>
+                        </span>
+                        <span class="mdc-notched-outline__trailing"></span>
+                    </span>
+                </label>
+                
+            </div>
         </div>
-        <label for="basic-switch">off/on</label>
         <br />
         <div id="text">
             <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea text input"

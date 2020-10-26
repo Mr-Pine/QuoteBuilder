@@ -27,6 +27,7 @@ $(function () {
 
     //const tabBar = new mdc.MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
+    const editNumber = new MDCTextField(document.querySelector('.number'))
     const text = new MDCTextField(document.querySelector('.text'));
     const author = new MDCTextField(document.querySelector('.author'));
     const authorTag = new MDCTextField(document.querySelector('.author-tag'))

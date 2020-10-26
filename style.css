@@ -1,9 +1,9 @@
 :root {
-    --font-color     : #ECECEC;
-    --light-grey     : #939393;
-    --dark-grey      : #23272A;
-    --highlight-color: #7289DA;
-    --background     : #2C2F33;
+    --font-color       : #ECECEC;
+    --light-grey       : #939393;
+    --dark-grey        : #23272A;
+    --highlight-color  : #7289DA;
+    --background       : #2C2F33;
     --mdc-theme-primary: var(--highlight-color)
 }
 
@@ -88,15 +88,51 @@ body {
 }
 
 #buttons {
-    margin-top     : 30pt;
-    display        : flex;
-    justify-content: space-around;
-    font-size: 13px !important;
+    margin-top                       : 30pt;
+    display                          : flex;
+    justify-content                  : space-around;
+    font-size                        : 13px !important;
     --mdc-typography-button-font-size: 13px !important;
 }
 
+.edit_delete {
+    font-family          : Roboto, sans-serif;
+    --mdc-theme-secondary: var(--mdc-theme-primary);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
 
-.mdc-text-field:not(.mdc-text-field--focused)+.mdc-text-field-helper-line .mdc-text-field-helper-text{
+.edit {
+    display: inline;
+    float  : right;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: auto;
+}
+
+#edit-number{
+    -moz-appearance: textfield;
+}
+
+#edit-number::-webkit-outer-spin-button,
+#edit-number::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.mdc-switch--checked+.edit {
+    color: #ad001f;
+}
+
+.mdc-switch {
+    margin-left: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.mdc-text-field:not(.mdc-text-field--focused)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
     display: none;
 }
 
@@ -232,6 +268,7 @@ body {
 }
 
 /* reversing effects on switch from materialize.css */
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked{
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
     pointer-events: auto;
 }
