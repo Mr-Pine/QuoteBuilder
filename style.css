@@ -122,14 +122,20 @@ body {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-.mdc-switch--checked+.edit {
-    color: #ad001f;
+.mdc-switch:not(.mdc-switch--checked)+.edit {
+    display: none;
 }
 
 .mdc-switch {
     margin-left: 8px;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+.mdc-button:not(:disabled).delete{
+    background-color: #c10023 !important;
+    border-color: #000000;
+    color: #6d0013;
 }
 
 .mdc-text-field:not(.mdc-text-field--focused)+.mdc-text-field-helper-line .mdc-text-field-helper-text {

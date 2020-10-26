@@ -62,11 +62,10 @@
                 </div>
             </div>
             <div class="edit">
-                <span>hi</span>
 
                 <label class="mdc-text-field mdc-text-field--outlined number" style="max-width: 90px;">
-                    <input type="number" maxlength="4" class="mdc-text-field__input browser-default input_field" autocomplete="off"
-                        aria-labelledby="number-label" name="number" id="edit-number">
+                    <input type="number" maxlength="4" class="mdc-text-field__input browser-default input_field"
+                        autocomplete="off" aria-labelledby="number-label" name="number" id="edit-number">
                     <span class="mdc-notched-outline">
                         <span class="mdc-notched-outline__leading"></span>
                         <span class="mdc-notched-outline__notch">
@@ -75,7 +74,15 @@
                         <span class="mdc-notched-outline__trailing"></span>
                     </span>
                 </label>
-                
+
+                <button type="button" class="mdc-button mdc-button--outlined delete clearRipple" id="delete-button"
+                onclick="deleteQuote()" >
+                <div class="mdc-button__ripple clearRipple"></div>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">delete_forever</i>
+                <span class="mdc-button__label">
+                    Quote<br>Löschen
+                </span>
+            </button>
             </div>
         </div>
         <br />
