@@ -230,3 +230,8 @@ body {
     /* Support for IE. */
     font-feature-settings: 'liga';
 }
+
+/* reversing effects on switch from materialize.css */
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked{
+    pointer-events: auto;
+}
