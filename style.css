@@ -91,6 +91,8 @@ body {
     margin-top     : 30pt;
     display        : flex;
     justify-content: space-around;
+    font-size: 13px !important;
+    --mdc-typography-button-font-size: 13px !important;
 }
 
 
@@ -139,10 +141,6 @@ body {
 
 .mdc-text-field--invalid:not(.mdc-text-field--disabled)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
     color: #a80000 !important;
-}
-
-.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: unset !important;
 }
 
 .snackbar--positive:not(.snackbar--negative) .mdc-snackbar__label {
