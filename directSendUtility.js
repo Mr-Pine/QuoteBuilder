@@ -1,7 +1,7 @@
 var authorizeURL = 'https://discord.com/api/oauth2/authorize';
 var tokenURL = 'https://discord.com/api/oauth2/token';
-var redirect_uri = /* "http://localhost:8100/" */"http://quotes.inch3n.de/builder/"
-var serverURL = "http://2.202.161.181:3000"/* "http://localhost:3000" */
+var redirect_uri = "http://localhost:8100/"/* "http://quotes.inch3n.de/builder/" */
+var serverURL = /* "http://2.202.161.181:3000" */"http://localhost:3000"
 let parameters = {}
 
 function getGetParameters() {
@@ -262,4 +262,30 @@ async function getValidServers() {
 function storeServer() {
     id = select.value
     setCookie("default_server", id, 365)
+}
+
+
+
+async function deleteQuote() {
+    var number = document.querySelector('#edit-number').value
+
+    getUser(access_cookie).then(async function (userJSON) {
+
+        var userID = await userJSON.id
+
+        response = await fetch(serverURL + '/delete', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: urlEncode({
+                number: number,
+                server: select.value,
+                user: userID
+            })
+        })
+    })
+
+    console.log(response)
 }

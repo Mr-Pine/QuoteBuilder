@@ -195,6 +195,8 @@ else {
         element.addEventListener(event, handler, false);
     };
 }
+
+
 function initResize() {
     var text = document.querySelector('.resize');
     function resize() {
