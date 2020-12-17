@@ -205,8 +205,12 @@ body {
     color: inherit;
 }
 
-.mdc-select {
+.mdc-select .mdc-select__anchor{
     width: 100%;
+}
+
+.mdc-select__selected-text{
+    transform: translateY(50%);
 }
 
 .mdc-select__anchor {
