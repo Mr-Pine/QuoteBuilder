@@ -1,7 +1,7 @@
 var authorizeURL = 'https://discord.com/api/oauth2/authorize';
 var tokenURL = 'https://discord.com/api/oauth2/token';
 var redirect_uri = "http://localhost:8100/"/* "http://quotes.inch3n.de/builder/" */
-var serverURL = /* "http://2.202.161.181:3000" */"http://localhost:3000"
+var serverURL = /* "http://raspberrypi.​mtxljeeh3dsnmpoj.​myfritz.​net:3000" */"http://localhost:3000"
 let parameters = {}
 
 function getGetParameters() {
@@ -212,36 +212,56 @@ function getCookie(cookieName) {
 }
 
 async function sendQuote() {
+    edit = $("#edit-switch").attr('aria-checked') == "true"
+    console.log(edit)
 
     textClassList = $("#text-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
     authorClassList = $("#author-input")[0].parentElement.classList.contains("mdc-text-field--invalid")
     selectClassList = $(".dropdown")[0].classList.contains("mdc-select--invalid")
+    numberInput = edit && ($("#edit-number").val() == "")
+
+    console.log(numberInput)
 
 
-    if (textClassList || authorClassList || selectClassList) {
+    if (textClassList || authorClassList || selectClassList || numberInput) {
         openSnackbar("Bitte alle erforderlichen Felder (*) ausfüllen", false)
         return
     }
 
     var response
 
-    getUser(access_cookie).then(async function (userJSON) {
+    sendUrl = serverURL
 
-        quoteString = generateQuoteText()
+    getUser(access_cookie).then(async function (userJSON) {
 
         var userID = await userJSON.id
 
-        response = await fetch(serverURL, {
+        quoteString = generateQuoteText()
+
+        bodyEncode = urlEncode({
+            server: select.value,
+            quote: quoteString,
+            user: userID
+        })
+
+        if (edit) {
+            sendUrl = serverURL + "/edit"
+
+            bodyEncode = urlEncode({
+                server: select.value,
+                quote: quoteString,
+                user: userID,
+                number: $("#edit-number").val()
+            })
+        }
+
+        response = await fetch(sendUrl, {
             method: 'POST',
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: urlEncode({
-                server: select.value,
-                quote: quoteString,
-                user: userID
-            })
+            body: bodyEncode
         })
 
         console.log(response)
