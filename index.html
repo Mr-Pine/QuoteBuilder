@@ -120,8 +120,8 @@
 
             <label class="mdc-text-field mdc-text-field--outlined author-tag input" style=" min-width: 400px;">
                 <input type="text" class="mdc-text-field__input browser-default input_field"
-                    aria-labelledby="author_tag-label" name="author-tag" id="author-tag-input"
-                    pattern="(<@\d{3,}>)|@.{3,}">
+                    aria-labelledby="author_tag-label" name="author-tag" id="author-tag-input" autocomplete="cc-number"
+                    pattern="(<@)?!?\d{10,30}>?(,\s*(<@)?!?\d{10,30}>?)*">
                 <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
@@ -131,11 +131,8 @@
                 </span>
             </label>
             <div class="mdc-text-field-helper-line" style="width: 400px;">
-                <div class="mdc-text-field-helper-text" aria-hidden="true">Die Erwähnung des Autors (Wenn auf dem
-                    Server) mit @ <i><b>oder</b></i> der Usertag so <@[tag]> eingibst, du bekommst ihn, wenn du z.B.
-                        \@QuoteBot in Discord eingibst<br />Beispiel: "@QuoteBot"<br /><b
-                            style="font-style: italic; color: #ad001f;">Achtung! Bitte Erwähnungen in Discord
-                            überprüfen</b>
+                <div class="mdc-text-field-helper-text" aria-hidden="true">Die ID des Autors. Du bekommst sie, wenn du z.B.
+                        \@QuoteBot in Discord eingibst<br />Beispiel: "<@!443872816933240833>" oder nur "443872816933240833"<br/>
                 </div>
             </div>
             <br />

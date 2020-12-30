@@ -132,7 +132,8 @@ body {
     background-color: var(--blueish_grey);
 }
 
-.mdc-chip__icon--trailing {
+.mdc-chip__icon--trailing,
+.mdc-chip__icon--trailing:focus {
     color: inherit;
 }
 
