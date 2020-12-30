@@ -4,9 +4,13 @@ function submit() {
 
 var snackbar
 var select
+var chipSetEl
+var chipSet
+
+var tagInput
 
 $(function () {
-    
+
     new mdc.switchControl.MDCSwitch(document.querySelector('.mdc-switch'));
 
     $("#copy-label").hide()
@@ -22,6 +26,7 @@ $(function () {
     const MDCSnackbar = mdc.snackbar.MDCSnackbar
     const MDCSelect = mdc.select.MDCSelect
     const MDCSwitch = mdc.switchControl.MDCSwitch
+    const MDCChipSet = mdc.chips.MDCChipSet
 
     snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
 
@@ -34,11 +39,16 @@ $(function () {
     const tags = new MDCTextField(document.querySelector('.tags'))
     const copyText = new MDCTextField(document.querySelector('.copy-text'))
 
-    
-    console.log(mdc)
+    chipSetEl = document.querySelector('.chips')
+    chipSet = new MDCChipSet(chipSetEl)
 
-    
+    tagInput = document.querySelector('#tag-input')
 
+    tagInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.keyCode === 13 || event.key === ',') {
+            createChip()
+        }
+    });
 
     select = new MDCSelect(document.querySelector('.dropdown'));
     //const select2 = new MDCSelect(document.querySelector('.dropdown2'));
@@ -48,37 +58,64 @@ $(function () {
         console.log(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
     });
 
-    $('.chips').chips();
-
     tryGetGuilds()
 });
 
-function onTagFocus() {
-    element = $("#tag-input")
-    if (element[0].value == "next Tag") {
-        element[0].value = " "
-        console.log("emptied")
-    }
+function createChipButton() {
+    createChip()
+    tagInput.focus()
 }
 
-function onChange(element) {
-    var childs = $("#tag-div")[0].children
-    if (!element.value.endsWith(" ") && childs.length > 1) {
-        element.value = element.value + " "
+async function createChip(content) {
+    chipContent = tagInput.value.trim()
+    if(content) chipContent = content
+    tagList = getTagList()
+
+
+    if (!tagList.includes(chipContent) && chipContent != "") {
+        htmlString = `
+        <div class="mdc-chip mdc-chip--deletable" role="row">
+                <div class="mdc-chip__ripple"></div>
+                <span role="gridcell">
+                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                        <span class="mdc-chip__text">${chipContent}</span>
+                    </span>
+                </span>
+                <span role="gridcell">
+                    <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing mdc-chip-trailing-action" tabindex="-1"
+                        role="button">cancel</i>
+                </span>
+            </div>
+        `
+
+        chipEl = createElementFromHTML(htmlString)
+
+        chipSetEl.appendChild(chipEl);
+        chipSet.addChip(chipEl);
     }
+    setTimeout(() => {
+        tagInput.value = "";
+    }, 1)
+
+
 }
 
-function onEnter(element, event) {
-    if (event.keyCode == 13) {
-        element.value = element.value + " "
-    }
+function getTagList() {
+    chipList = chipSet.chips
+    tagList = []
+    chipList.forEach(chip => {
+        tagList.push(chip.root.children[1].innerText)
+    })
+    console.log(chipList)
+    return tagList
 }
 
-function onBack(element, event) {
-    var childs = $("#tag-div")[0].children
-    if (event.keyCode == 8 && element.value == "" && childs.length > 1) {
-        element.value = " "
-    }
+function createElementFromHTML(htmlString) {
+    var div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+
+    // Change this to div.childNodes to support multiple top-level nodes
+    return div.firstChild;
 }
 
 function copy() {
@@ -120,11 +157,7 @@ function generateQuoteText() {
     } else {
         authorTag = "none"
     }
-    var tags = []
-    $("#tag-div")[0].M_Chips.chipsData.forEach((tagChip) => {
-        tags.push(tagChip.tag)
-    })
-    tags = tags.join(", ")
+    var tags = getTagList().join(', ')
 
     console.log("got Data")
 
@@ -148,10 +181,6 @@ function clearAll() {
 
     document.getElementById("author-tag-input").value = ""
 
-    tagDiv = document.getElementById("tag-div")
-    while (tagDiv.M_Chips.chipsData.length > 0) {
-        tagDiv.M_Chips.deleteChip(0)
-    }
     document.getElementById("tag-input").value = ""
 
     textInput = $("#text-input")
@@ -167,6 +196,11 @@ function clearAll() {
     author[0].parentElement.classList.remove("mdc-text-field--invalid")
 
     $("#author-tag-input")[0].parentElement.classList.remove("mdc-text-field--invalid")
+
+    chipList = chipSet.chips
+    chipList.forEach(chip => {
+        chip.beginExit()
+    })
 
     openSnackbar("Gelöscht!", true)
 }

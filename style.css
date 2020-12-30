@@ -4,6 +4,11 @@
     --dark-grey        : #23272A;
     --highlight-color  : #7289DA;
     --background       : #2C2F33;
+    --blurple          : #7289DA;
+    --greyple          : #99AAB5;
+    --dark_not_black   : #2d3034;
+    --not_quite_black  : #23272A;
+    --blueish_grey     : #475158;
     --mdc-theme-primary: var(--highlight-color)
 }
 
@@ -82,11 +87,6 @@ body {
     max-width    : 384px;
 }
 
-.chip {
-    background-color: var(--light-grey);
-    color           : var(--dark-grey);
-}
-
 #buttons {
     margin-top                       : 30pt;
     display                          : flex;
@@ -98,20 +98,20 @@ body {
 .edit_delete {
     font-family          : Roboto, sans-serif;
     --mdc-theme-secondary: var(--mdc-theme-primary);
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
+    display              : inline-flex;
+    align-items          : center;
+    width                : 100%;
 }
 
 .edit {
-    display: inline;
-    float  : right;
-    margin-top: 2px;
+    display      : inline;
+    float        : right;
+    margin-top   : 2px;
     margin-bottom: 2px;
-    margin-left: auto;
+    margin-left  : auto;
 }
 
-#edit-number{
+#edit-number {
     -moz-appearance: textfield;
 }
 
@@ -119,7 +119,25 @@ body {
 #edit-number::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin            : 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.mdc-chip__icon--trailing:hover {
+    color: #ab3535;
+}
+
+.mdc-chip-set .mdc-chip {
+    color: var(--blurple);
+    background-color: var(--blueish_grey);
+}
+
+.mdc-chip__icon--trailing {
+    color: inherit;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background: none;
 }
 
 .mdc-switch:not(.mdc-switch--checked)+.edit {
@@ -127,19 +145,19 @@ body {
 }
 
 .mdc-switch {
-    margin-left: 8px;
-    margin-top: 16px;
+    margin-left  : 8px;
+    margin-top   : 16px;
     margin-bottom: 16px;
 }
 
-.mdc-button:not(:disabled).delete{
+.mdc-button:not(:disabled).delete {
     background-color: #c10023 !important;
-    border-color: #000000;
-    color: #6d0013;
+    border-color    : #000000;
+    color           : #6d0013;
 }
 
 .mdc-text-field:not(.mdc-text-field--focused)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
-    display: none;
+    display         : none;
     transition-delay: display 1s;
 }
 
@@ -160,17 +178,30 @@ body {
 
 .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-notched-outline__leading,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-notched-outline__notch,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-notched-outline__trailing {
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-notched-outline__trailing,
+.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-line-ripple::before {
     border-color: var(--dark-grey);
 }
 
 .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid):hover .mdc-notched-outline .mdc-notched-outline__leading,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid):hover .mdc-notched-outline .mdc-notched-outline__notch,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid):hover .mdc-notched-outline .mdc-notched-outline__trailing,
+.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid):hover .mdc-line-ripple::before {
     border-color: #99AAB5;
 }
 
+.mdc-text-field__icon {
+    outline: none;
+    color  : var(--dark-grey) !important;
+}
 
+.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):not(.mdc-text-field--invalid):hover .mdc-text-field__icon {
+    color: #99AAB5 !important;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid).mdc-text-field--focused .mdc-text-field__icon {
+    color: var(--highlight-color) !important;
+}
 
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
 .mdc-text-field--invalid:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
@@ -206,11 +237,11 @@ body {
     color: inherit;
 }
 
-.mdc-select .mdc-select__anchor{
+.mdc-select .mdc-select__anchor {
     width: 100%;
 }
 
-.mdc-select__selected-text{
+.mdc-select__selected-text {
     transform: translateY(50%);
 }
 

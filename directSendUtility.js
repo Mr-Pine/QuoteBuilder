@@ -1,8 +1,10 @@
 var authorizeURL = 'https://discord.com/api/oauth2/authorize';
 var tokenURL = 'https://discord.com/api/oauth2/token';
 var redirect_uri = "http://localhost:8100/"/* "http://quotes.inch3n.de/builder/" */
-var serverURL = /* "http://raspberrypi.​mtxljeeh3dsnmpoj.​myfritz.​net:3000" */"http://localhost:3000"
+var serverURL = "http://raspberrypi.​mtxljeeh3dsnmpoj.​myfritz.​net:3000"//"http://localhost:3000"
 let parameters = {}
+
+getGuildsCountdown = 5
 
 function getGetParameters() {
     bodyObject = {}
@@ -18,19 +20,23 @@ function getGetParameters() {
     return bodyObject
 }
 
-function getStoredData(){
-    data = JSON.parse(getCookie("quote_data"))
+function getStoredData() {
+    try {
+        data = JSON.parse(getCookie("quote_data"))
 
-    document.getElementById("text-input").value = data["text"]
-    document.getElementById("author-input").value = data["author"]
-    document.getElementById("author-tag-input").value = data["author_tag"]
-    tagDiv = document.getElementById("tag-div")
-    data["tags"].forEach(tag => {
-        console.log("hi :)")
-        tagDiv.M_Chips.addChip({tag: tag})
-    })
+        document.getElementById("text-input").value = data["text"]
+        document.getElementById("author-input").value = data["author"]
+        document.getElementById("author-tag-input").value = data["author_tag"]
+        data["tags"].forEach(tag => {
+            createChip(tag)
+        })
 
-    setCookie("quote_data", "", -10)
+        setCookie("quote_data", "", -10)
+    }
+    catch (e) {
+        console.log("no data cached")
+    }
+
 }
 
 async function tryGetGuilds() {
@@ -93,7 +99,10 @@ async function tryGetGuilds() {
                         setCookie("access_token", access, 1)
                         setCookie("refresh_token", refresh, 7)
 
-                        tryGetGuilds()
+                        if (getGuildsCountdown > 0) {
+                            tryGetGuilds()
+                            getGuildsCountdown--
+                        }
                     }
                 })
             }
@@ -109,7 +118,10 @@ async function tryGetGuilds() {
                 setCookie("access_token", access, 1)
                 setCookie("refresh_token", refresh, 7)
 
-                tryGetGuilds()
+                if (getGuildsCountdown > 0) {
+                    tryGetGuilds()
+                    getGuildsCountdown--
+                }
             }
         })
     }
@@ -124,11 +136,8 @@ function getNewCode() {
     var text = document.getElementById("text-input").value
     var author = document.getElementById("author-input").value
     var authorTag = document.getElementById("author-tag-input").value
-    var tags = []
-    $("#tag-div")[0].M_Chips.chipsData.forEach((tagChip) => {
-        tags.push(tagChip.tag)
-    })
-    
+    var tags = getTagList()
+
     data = {
         text: text,
         author: author,
