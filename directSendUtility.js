@@ -18,9 +18,26 @@ function getGetParameters() {
     return bodyObject
 }
 
+function getStoredData(){
+    data = JSON.parse(getCookie("quote_data"))
+
+    document.getElementById("text-input").value = data["text"]
+    document.getElementById("author-input").value = data["author"]
+    document.getElementById("author-tag-input").value = data["author_tag"]
+    tagDiv = document.getElementById("tag-div")
+    data["tags"].forEach(tag => {
+        console.log("hi :)")
+        tagDiv.M_Chips.addChip({tag: tag})
+    })
+
+    setCookie("quote_data", "", -10)
+}
+
 async function tryGetGuilds() {
     access_cookie = getCookie("access_token")
     refresh_cookie = getCookie("refresh_token")
+
+    getStoredData()
 
     try {
         parameters = getGetParameters()
@@ -102,6 +119,24 @@ function getNewCode() {
     console.log("getting new Code")
     setCookie("access_token", "", -10)
     setCookie("refresh_token", "", -10)
+
+    //save content as cookies
+    var text = document.getElementById("text-input").value
+    var author = document.getElementById("author-input").value
+    var authorTag = document.getElementById("author-tag-input").value
+    var tags = []
+    $("#tag-div")[0].M_Chips.chipsData.forEach((tagChip) => {
+        tags.push(tagChip.tag)
+    })
+    
+    data = {
+        text: text,
+        author: author,
+        author_tag: authorTag,
+        tags: tags
+    }
+
+    setCookie("quote_data", JSON.stringify(data), 1)
 
     body = {
         client_id: secrets.client_id,

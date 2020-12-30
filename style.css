@@ -140,6 +140,7 @@ body {
 
 .mdc-text-field:not(.mdc-text-field--focused)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
     display: none;
+    transition-delay: display 1s;
 }
 
 
